@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<table class="table">
+    <caption>House Information</caption>
+    <thead>
+    <tr>
+        <th>address</th>
+        <th>price</th>
+        <th>otherInfo</th>
+    </tr>
+    </thead>
+    <tbody id="my-table">
+
+    <h2>{{ houses|length }}</h2>
+    {% for house in houses|sub(1,30) %}
+        <tr>
+            <td>{{ house.address }}</td>
+            <td>{{ house.price }}</td>
+            <td>{{ house.otherInfo }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+
+    <ul class="pagination">
+        <li><a href="">&laquo;</a></li>
+        {% for index in totalNum %}
+            <li><a href="javascript:void(0)" onclick="showData({{ index }})">{{ index }}</a></li>
+        {% endfor %}
+        <li><a href="#">&raquo;</a></li>
+    </ul>
+
+
+</table>
+
+<script>
+
+
+    function showData(index) {
+        let innerHTML = "";
+        console.log(index);
+        let tbody = document.getElementById("my-table");
+
+        page.current = index - 1;
+        let data = filterData(page);
+        let item = "";
+        for (let i = 0; i < data.length; i++) {
+            item = data[i];
+            console.log("-----");
+            innerHTML = innerHTML + "";
+        }
+        console.log("-----");
+        tbody.innerHTML = innerHTML;
+    }
+
+
+    let models = {
+        start: 1,
+        size: 10,
+        end: 10
+    }
+    let filterData = (index, models) => {
+        models.start = 1 + index * models.size;
+        models.end = models.start + models.size;
+    }
+
+
+    {##}
+    {#let dataLIst = [];#}
+    {#let user = {}#}
+    {#let address = "";#}
+    {#let price = "";#}
+    {#let otherInfo = "";#}
+    {##}
+    {#dataLIst.push({{ houses|sub(1,4) }})#}
+    {##}
+    {#{% for index in tatalNumber %}#}
+    {#    console.log(index)#}
+    {#{% endfor %}#}
+    {##}
+    {#let page = {#}
+    {#    current: 1,#}
+    {#    size: 10#}
+    {#}#}
+        {#let filterData = (page) => {#}
+        {#    let start = page.current * page.size;#}
+        {#    return dataLIst.slice(start, start + page.size)#}
+        {#    return dataLIst[1]#}
+        {#}#}
+            {##}
+            {#window.onload = function () {#}
+            {#    console.log("aaaaa")#}
+            {#    showData(1);#}
+            {#    console.log("hah")#}
+            {
+    #}#}
+
+</script>
+</body>
+</html>

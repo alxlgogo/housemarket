@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for index in totalNum %}
+    <tr>
+        <td>{{ index }}</td>
+    </tr>
+{% endfor %}
+
+
+<ul class="pagination">
+    <li><a href="#">&laquo;</a></li>
+    {% for index in totalNum %}
+        <tr>
+            <td></td>
+            <li><a href="#">{{ index }}</a></li>
+        </tr>
+    {% endfor %}
+    <li><a href="#">&raquo;</a></li>
+</ul>
+</body>
+</html>

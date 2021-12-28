@@ -47,3 +47,8 @@ if __name__ == '__main__':
 @app.template_filter('sub')
 def sub(list, start, end):
     return list[start:end]
+
+
+@app.route('/demo')
+def demo():
+    return render_template('demo.html')

@@ -47,4 +47,4 @@ def getHouseData():
         soup = getSoup(url)
         houseList = parsePage(soup)
         houses.extend(houseList)
-    return houses;
+    return houses

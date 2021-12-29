@@ -2,7 +2,7 @@ from flask import Flask, render_template
 
 from config import db
 from models.house import house
-from services.scrapeData import getHouseData
+from services.scrapeData import getHouseData, getHouseLocation
 
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
@@ -51,4 +51,10 @@ def sub(list, start, end):
 
 @app.route('/demo')
 def demo():
+    address = "24 the waxworks, Ashtown, Dublin 15"
+    address1 = "Park Avenue, Sandymount, Dublin 4"
+    address2 = "Champ de Mars, Paris, France"
+    location = getHouseLocation(address)
+    latitude = location.latitude
+    longitude = location.longitude
     return render_template('demo.html')

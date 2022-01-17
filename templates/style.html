@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 4, from LayoutIt!</title>
+
+    <link href="{{ url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet">
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                <tr>
+                    {% for head in heads %}
+                        <th>
+                            {{ head }}
+                        </th>
+                    {% endfor %}
+                </tr>
+                </thead>
+                <tbody id="tablePage">
+                {% for table in row_data %}
+                    <tr>
+                        {% for per in table %}
+                            <td>{{ per }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination" id="pageList">
+                    <li class="page-item">
+                        <a class="page-link" href="javascript:pre()" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="javascript:nPage(1)">1</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:nPage(2)">2</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:nPage(3)">3</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:nPage(4)">4</a></li>
+{#                    <li class="page-item"><a class="page-link" href="javascript:nPage(5)">5</a></li>#}
+                    <li class="page-item">
+                        <a class="page-link" href="javascript:next()" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+        </div>
+    </div>
+</div>
+
+<script>
+    var theTable = document.getElementById("tablePage");
+    var spanPre = document.getElementById("spanPre");
+    var spanNext = document.getElementById("spanNext");
+    var pageList = document.getElementById("pageList");
+    var spanPageN = pageList.getElementsByTagName("li");
+
+    var numberRowsInTable = theTable.rows.length;
+    var pageSize = 10;
+    var page = 1;
+
+    function clearActive() {
+        for (var i = 1; i < spanPageN.length - 1; i++) {
+            console.log(spanPageN[i].id);
+            spanPageN[i].setAttribute("class", "");
+        }
+    }
+
+    function next() {
+        hideTable();
+        currentRow = pageSize * page;
+        maxRow = currentRow + pageSize;
+        if (maxRow > numberRowsInTable) {
+            maxRow = numberRowsInTable;
+        }
+        for (var i = currentRow; i < maxRow; i++) {
+            theTable.rows[i].style.display = '';
+        }
+        page++;
+        if (maxRow == numberRowsInTable) {
+            console.log(maxRow + "=======");
+            nextOff();
+        }
+        preOn();
+        showPageActive(page);
+    }
+
+    function pre() {
+
+        hideTable();
+        page--;
+
+        currentRow = pageSize * page;
+        maxRow = currentRow - pageSize;
+        if (currentRow > numberRowsInTable) currentRow = numberRowsInTable;
+        for (var i = maxRow; i < currentRow; i++) {
+            theTable.rows[i].style.display = '';
+        }
+
+        if (maxRow == 0) {
+            preOff();
+
+        }
+        showPageActive(page);
+        nextOn();
+
+    }
+
+    function nPage(n) {
+        hideTable();
+
+        currentRow = pageSize * (n - 1);
+        maxRow = currentRow + pageSize;
+        if (currentRow > numberRowsInTable) currentRow = numberRowsInTable;
+        for (var i = currentRow; i < maxRow; i++) {
+            theTable.rows[i].style.display = '';
+        }
+
+
+        if (n == 1) {
+            preOff();
+        } else if (n * pageSize == numberRowsInTable) {
+            nextOff();
+        } else {
+            nextOn();
+            preOn();
+        }
+        showPageActive(n);
+
+    }
+
+    function hideTable() {
+        for (var i = 0; i < numberRowsInTable; i++) {
+            theTable.rows[i].style.display = 'none';
+        }
+    }
+
+    function showPageActive(p) {
+        clearActive();
+        var nowpage = document.getElementById('spanpage' + p);
+        console.log(nowpage.id);
+        nowpage.setAttribute("class", "active");
+
+    }
+
+    function pageCount() {
+        var count = 0;
+        if (numberRowsInTable % pageSize != 0) count = 1;
+        return parseInt(numberRowsInTable / pageSize) + count;
+    }
+
+
+    function preOn() {
+        spanPre.innerHTML = " <a href='javascript:pre();'>&laquo;</a>";
+        spanPre.setAttribute("class", "");
+    }
+
+    function preOff() {
+        spanPre.innerHTML = " <a href='javascript:void(0);'>&laquo;</a>";
+        spanPre.className = "disabled";
+    }
+
+    function nextOn() {
+        spanNext.innerHTML = "<a href='javascript:next()'>&raquo;</a>";
+        spanNext.setAttribute("class", "");
+    }
+
+    function nextOff() {
+        spanNext.innerHTML = "<a href='javascript:void(0)'>&raquo;</a>";
+        spanNext.setAttribute("class", "disabled");
+    }
+
+
+    function hide() {
+        for (var i = pageSize; i < numberRowsInTable; i++) {
+            theTable.rows[i].style.display = 'none';
+        }
+        preOff();
+        nextOn();
+    }
+
+    hide();
+</script>
+
+
+<script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+<script src=" {{ url_for('static',filename='js/scripts.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bootstrap 4, from LayoutIt!</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="{{ url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/app/chart.css') }}" rel="stylesheet">
+
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <div style="text-align: center"><h1>House market</h1></div>
+    <div class="row" style="border: lightsalmon 2px dashed">
+        <div class="col-md-6" style="border: lightsalmon 2px dashed">
+            <table class="table">
+                <thead>
+                <tr>
+                    {% for head in heads %}
+                        <th>
+                            {{ head }}
+                        </th>
+                    {% endfor %}
+                </tr>
+                </thead>
+                <tbody id="tablePage">
+                {% for table in row_data %}
+                    <tr>
+                        {% for per in table %}
+                            <td>{{ per }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination" id="pageList">
+                    <li class="page-item">
+                        <a class="page-link" href="javascript:pre()" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="javascript:nPage(1)">1</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:nPage(2)">2</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:nPage(3)">3</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:nPage(4)">4</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:nPage(5)">5</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:nPage(6)">6</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="javascript:next()" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-6" style="border: lightsalmon 2px dashed">
+
+            <figure class="highcharts-figure">
+                <div id="container"></div>
+            </figure>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+        </div>
+    </div>
+</div>
+
+
+<script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+<script src=" {{ url_for('static',filename='js/scripts.js') }}"></script>
+<script src=" {{ url_for('static',filename='js/app/mytable.js') }}"></script>
+<script src=" {{ url_for('static',filename='js/app/mychart.js') }}"></script>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<script>
+
+
+    Highcharts.chart('container', {
+
+            title: {
+                text: 'Ireland house price, 1976-2015'
+            },
+
+            subtitle: {
+                text: 'Source: https://data.gov.ie/'
+            },
+
+            yAxis: {
+                title: {
+                    text: 'Price €'
+                }
+            },
+
+            xAxis: {
+                accessibility: {
+                    rangeDescription: 'Range: 1976 to 2015'
+                }
+            },
+
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle'
+            },
+
+            plotOptions: {
+                series: {
+                    label: {
+                        connectorAllowed: false
+                    },
+                    pointStart: 1976
+                }
+            },
+            series: [
+                {% for ser in series %}
+                    {
+                        name: "{{ ser['name'] }}",
+                        data:{{ ser['data'] }}
+                    },
+                {% endfor %}
+            ],
+
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
+            }
+
+        }
+    )
+    ;
+</script>
+</body>
+</html>

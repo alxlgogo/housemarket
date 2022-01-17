@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bootstrap 4, from LayoutIt!</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="{{ url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet">
+
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4" style="border: lightgray 1px solid">
+            <div style="text-align: center">
+                <h3 style="color:darkslategray">Logarithmic transformation</h3>
+            </div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>
+                        #
+                    </th>
+                    <th>
+                        Features
+                    </th>
+                    <th>
+                        Values
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        Test Statistic
+                    </td>
+                    <td>
+                    <td>{{ log_Adf[0] }}</td>
+                    </td>
+                </tr>
+                <tr class="table-active">
+                    <td>
+                        2
+                    </td>
+                    <td>
+                        p-value
+                    </td>
+                    <td>
+                    <td>{{ log_Adf[1] }}</td>
+                    </td>
+                </tr>
+                <tr class="table-success">
+                    <td>
+                        3
+                    </td>
+                    <td>
+                        Lags Used
+                    </td>
+                    <td>
+                    <td>{{ log_Adf[2] }}</td>
+                    </td>
+                </tr>
+                <tr class="table-warning">
+                    <td>
+                        4
+                    </td>
+                    <td>
+                        N O B
+                    </td>
+                    <td>
+                    <td>{{ log_Adf[3] }}</td>
+                    </td>
+                </tr>
+                <tr class="table-danger">
+                    <td>
+                        5
+                    </td>
+                    <td>
+                        Critical Value(1%)
+                    </td>
+                    <td>
+                    <td>{{ log_Adf[4]['1%'] }}</td>
+                    </td>
+                </tr>
+                <tr class="table-danger">
+                    <td>
+                        6
+                    </td>
+                    <td>
+                        Critical Value(5%)
+                    </td>
+                    <td>
+                    <td>{{ log_Adf[4]['5%'] }}</td>
+                    </td>
+                </tr>
+                <tr class="table-danger">
+                    <td>
+                        7
+                    </td>
+                    <td>
+                        Critical Value(10%)
+                    </td>
+                    <td>
+                    <td>{{ log_Adf[4]['10%'] }}</td>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div style="text-align: center">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="Logarithmic"/> Logarithmic
+                    </label>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4" style="border: lightgray 1px solid">
+            <div style="text-align: center">
+                <h3 style="color:darkslategray">Logarithmic transformation</h3>
+            </div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>
+                        #
+                    </th>
+                    <th>
+                        Features
+                    </th>
+                    <th>
+                        Values
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        Test Statistic
+                    </td>
+                    <td>
+                    <td>{{ avg_adf[0] }}</td>
+                    </td>
+                </tr>
+                <tr class="table-active">
+                    <td>
+                        2
+                    </td>
+                    <td>
+                        p-value
+                    </td>
+                    <td>
+                    <td>{{ avg_adf[1] }}</td>
+                    </td>
+                </tr>
+                <tr class="table-success">
+                    <td>
+                        3
+                    </td>
+                    <td>
+                        Lags Used
+                    </td>
+                    <td>
+                    <td>{{ avg_adf[2] }}</td>
+                    </td>
+                </tr>
+                <tr class="table-warning">
+                    <td>
+                        4
+                    </td>
+                    <td>
+                        N O B
+                    </td>
+                    <td>
+                    <td>{{ avg_adf[3] }}</td>
+                    </td>
+                </tr>
+                <tr class="table-danger">
+                    <td>
+                        5
+                    </td>
+                    <td>
+                        Critical Value(1%)
+                    </td>
+                    <td>
+                    <td>{{ avg_adf[4]['1%'] }}</td>
+                    </td>
+                </tr>
+                <tr class="table-danger">
+                    <td>
+                        6
+                    </td>
+                    <td>
+                        Critical Value(5%)
+                    </td>
+                    <td>
+                    <td>{{ avg_adf[4]['5%'] }}</td>
+                    </td>
+                </tr>
+                <tr class="table-danger">
+                    <td>
+                        7
+                    </td>
+                    <td>
+                        Critical Value(10%)
+                    </td>
+                    <td>
+                    <td>{{ avg_adf[4]['10%'] }}</td>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div style="text-align: center">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="MovingAverage"/> Moving Average
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4" style="border: lightgray 1px solid">
+            <div style="text-align: center">
+                <h3 style="color:darkslategray">Logarithmic transformation</h3>
+            </div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>
+                        #
+                    </th>
+                    <th>
+                        Features
+                    </th>
+                    <th>
+                        Values
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        Test Statistic
+                    </td>
+                    <td>
+                    <td>{{ difference_adf[0] }}</td>
+                    </td>
+                </tr>
+                <tr class="table-active">
+                    <td>
+                        2
+                    </td>
+                    <td>
+                        p-value
+                    </td>
+                    <td>
+                    <td>{{ difference_adf[1] }}</td>
+                    </td>
+                </tr>
+                <tr class="table-success">
+                    <td>
+                        3
+                    </td>
+                    <td>
+                        Lags Used
+                    </td>
+                    <td>
+                    <td>{{ difference_adf[2] }}</td>
+                    </td>
+                </tr>
+                <tr class="table-warning">
+                    <td>
+                        4
+                    </td>
+                    <td>
+                        N O B
+                    </td>
+                    <td>
+                    <td>{{ difference_adf[3] }}</td>
+                    </td>
+                </tr>
+                <tr class="table-danger">
+                    <td>
+                        5
+                    </td>
+                    <td>
+                        Critical Value(1%)
+                    </td>
+                    <td>
+                    <td>{{ difference_adf[4]['1%'] }}</td>
+                    </td>
+                </tr>
+                <tr class="table-danger">
+                    <td>
+                        6
+                    </td>
+                    <td>
+                        Critical Value(5%)
+                    </td>
+                    <td>
+                    <td>{{ difference_adf[4]['5%'] }}</td>
+                    </td>
+                </tr>
+                <tr class="table-danger">
+                    <td>
+                        7
+                    </td>
+                    <td>
+                        Critical Value(10%)
+                    </td>
+                    <td>
+                    <td>{{ difference_adf[4]['10%'] }}</td>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div style="text-align: center">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="Difference1"/> Difference1
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+<script src=" {{ url_for('static',filename='js/scripts.js') }}"></script>
+
+<script>
+    $(function () {
+        $('#Logarithmic').click(function () {
+            var chk = $("#Logarithmic");
+            var checked = chk.prop('checked');
+            if (checked) {
+                alert("Checkbox is checked.");
+            } else {
+                alert("Checkbox is unchecked.");
+            }
+        });
+    });
+
+
+</script>
+</body>
+</html>

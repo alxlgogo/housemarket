@@ -180,13 +180,12 @@ def ana():
     del ts['YEAR']
     ts = ts[city].dropna().apply(convert_currency)
 
-
     # Logarithmic transformation
     ts_log = np.log(ts.dropna())
     temp1 = np.array(ts_log.dropna())
     log_Adf = getAdf(temp1)
 
-    #moving average
+    # moving average
     expwighted_avg = ts_log.ewm(halflife=12).mean()
     temp2 = np.array(expwighted_avg.dropna())
     avg_adf = getAdf(temp2)
@@ -227,4 +226,26 @@ def monitor():
         print(dic)
         series.append(dic)
 
-    return render_template('monitor.html', heads=column_names, row_data=row_data, series=series, zip=zip)
+    city = 'Dublin'
+    data['YEAR'] = pd.to_datetime(data['YEAR'], format='%Y')
+    ts = pd.DataFrame(data, columns=['YEAR', city])
+    ts.index = ts['YEAR']
+    del ts['YEAR']
+    ts = ts[city].dropna().apply(convert_currency)
+    # Logarithmic transformation
+    ts_log = np.log(ts.dropna())
+    temp1 = np.array(ts_log.dropna())
+    log_Adf = getAdf(temp1)
+
+    # moving average
+    expwighted_avg = ts_log.ewm(halflife=12).mean()
+    temp2 = np.array(expwighted_avg.dropna())
+    avg_adf = getAdf(temp2)
+
+    # difference 1
+    diff1 = expwighted_avg.diff(3)
+    temp3 = np.array(diff1.dropna())
+    difference_adf = getAdf(temp3)
+
+    return render_template('monitor.html', heads=column_names, row_data=row_data, series=series, log_Adf=log_Adf,
+                           avg_adf=avg_adf, difference_adf=difference_adf, citys=citys, zip=zip)

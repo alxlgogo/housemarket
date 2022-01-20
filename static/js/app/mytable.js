@@ -5,7 +5,7 @@ var pageList = document.getElementById("pageList");
 var spanPageN = pageList.getElementsByTagName("li");
 
 var numberRowsInTable = theTable.rows.length;
-// var pageSize = 10;
+var pageSize = 10;
 var pageSize = 7;
 var page = 1;
 

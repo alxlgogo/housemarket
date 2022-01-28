@@ -97,7 +97,7 @@ def convert_address_to_lat_and_lng(city_name):
 
 def get_latitude_and_longitude(location):
     base_url = "https://maps.googleapis.com/maps/api/geocode/json?address="
-    key = "&key=AIzaSyBN2oPeNlWApBcIvsC6KEF2BRiD_2DkhbM"
+    key = "&key="
     url = base_url + location + key
     r = requests.get(url=url)
     data = r.json()

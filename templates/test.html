@@ -1,26 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bootstrap 4, from LayoutIt!</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="{{ url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet">
+
 </head>
 <body>
-{% for index in totalNum %}
-    <tr>
-        <td>{{ index }}</td>
-    </tr>
-{% endfor %}
 
 
-<ul class="pagination">
-    <li><a href="#">&laquo;</a></li>
-    {% for index in totalNum %}
-        <tr>
-            <td></td>
-            <li><a href="#">{{ index }}</a></li>
-        </tr>
-    {% endfor %}
-    <li><a href="#">&raquo;</a></li>
-</ul>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>1.Get data</h1>
+            <form role="form" method="POST" action="/get_data">
+                <div class="row align-items-center"
+                     style="border: 1px lightgrey solid;">
+                    <div class="col-md-12" id="city_radio">
+                        <span class="ml-4">
+                            <input type="radio" name="cityName" value="Dublin" checked> Dublin
+                        </span>
+                        <span class="ml-4">
+                            <input type="radio" name="cityName" value="Cork"> Cork
+                        </span>
+                        <div>
+                            <h2>get renting house or selling house</h2>
+                            <span class="ml-4">
+                            <input type="radio" name="dataType" value="renting"> renting
+                        </span>
+                            <span class="ml-4">
+                            <input type="radio" name="dataType" value="selling" checked> selling
+                        </span>
+                        </div>
+                        <div>
+                            <input type="text" name="pageNumber">
+                        </div>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+<script src=" {{ url_for('static',filename='js/scripts.js') }}"></script>
 </body>
 </html>

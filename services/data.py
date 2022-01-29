@@ -1,10 +1,14 @@
 from bs4 import BeautifulSoup
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 import requests
 import csv
 import pandas as pd
 
-
 # Get all house rental page url
+from models.keys import Keys
+
+
 def get_urls(city_name, page_number, base_url):
     # base_url = "https://www.myhome.ie/rentals/" + city_name + "/property-to-rent?page="
     # base_url = "https://www.myhome.ie/rentals/dublin/property-to-rent-in-dublin-12?page="
@@ -68,7 +72,7 @@ def scrape_data(city_name, file_name, page_number, base_url):
     file.close()
 
 
-def convert_address_to_lat_and_lng(city_name):
+def convert_address_to_lat_and_lng(city_name, key):
     file_name = city_name + '.csv'
     data = pd.read_csv("../" + file_name)
     longitude = []
@@ -82,7 +86,7 @@ def convert_address_to_lat_and_lng(city_name):
             longitude.append('')
             full_address.append('')
         else:
-            geo_data = get_latitude_and_longitude(location)
+            geo_data = get_latitude_and_longitude(location, key)
             geo_latitude = geo_data['results'][0]['geometry']['location']['lat']
             geo_longitude = geo_data['results'][0]['geometry']['location']['lng']
             formatted_address = geo_data['results'][0]['formatted_address']
@@ -95,10 +99,10 @@ def convert_address_to_lat_and_lng(city_name):
     write_data_to_csv(data, city_name)
 
 
-def get_latitude_and_longitude(location):
+def get_latitude_and_longitude(location, key):
     base_url = "https://maps.googleapis.com/maps/api/geocode/json?address="
-    key = "&key="
-    url = base_url + location + key
+    googel_geo_key = "&key=" + key
+    url = base_url + location + googel_geo_key
     r = requests.get(url=url)
     data = r.json()
     return data
@@ -107,4 +111,17 @@ def get_latitude_and_longitude(location):
 def write_data_to_csv(data, file_name):
     data.to_csv("./new" + file_name + '.csv')
 
+
+def get_google_key():
+    engine = create_engine("mysql://root:root@127.0.0.1:3306/housemarket", pool_size=8)
+    DbSession = sessionmaker(bind=engine)
+    session = DbSession()
+    keys = session.query(Keys).filter_by(key_name='google_key').all()
+    key_value = ""
+    if len(keys) == 1:
+        key_value = keys[0].key_value
+    session.close()
+    return key_value
 # convert_address_to_lat_and_lng("Dublin")
+
+# get_google_key()

@@ -4,7 +4,7 @@ import statsmodels.api as sm
 from flask import Flask, render_template, request, jsonify
 from models.house import house
 from services.scrapeData import getHouseData, getHouseLocation
-from services.data import scrape_data, convert_address_to_lat_and_lng
+from services.data import scrape_data, convert_address_to_lat_and_lng, get_google_key
 
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
@@ -299,5 +299,6 @@ def get_data():
 @app.route('/convertAddress', methods=['GET', 'POST'])
 def convert_address():
     city_name = request.form['cityName']
-    convert_address_to_lat_and_lng(city_name)
+    key = get_google_key()
+    convert_address_to_lat_and_lng(city_name, key)
     return render_template('data.html')

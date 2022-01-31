@@ -29,10 +29,9 @@ def get_soup(url):
 
 def parse_page(soup, writer):
     houses = soup.find_all("div", {"class": "PropertyListingCard__PropertyInfo"})
-    print("x")
     for house in houses:
         address = house.find("a", {"class": "PropertyListingCard__Address"}).text
-        area = address.split(',')[-1]
+        area = address.split(',')[-1].strip()
         # print(address)
         price = house.find("div", {"class": "PropertyListingCard__Price"}).text
         price = price.replace(" ", "").replace(",", "").replace("€", "")
@@ -50,13 +49,13 @@ def parse_page(soup, writer):
             cube_tage = span.find("app-mh-icon", {"icon": "cube"})
             home_tage = span.find("app-mh-icon", {"icon": "home"})
             if bed_tage is not None:
-                bed = span.text
+                bed = span.text.strip()
             if bath_tage is not None:
-                bath = span.texts
+                bath = span.text.strip()
             if cube_tage is not None:
-                cube = span.text
+                cube = span.text.strip()
             if home_tage is not None:
-                home = span.text
+                home = span.text.strip()
             otherinfo += span.text
         writer.writerow([bed, bath, cube, home, price, area, address])
 
@@ -74,7 +73,7 @@ def scrape_data(city_name, file_name, page_number, base_url):
 
 def convert_address_to_lat_and_lng(city_name, key):
     file_name = city_name + '.csv'
-    data = pd.read_csv("../" + file_name)
+    data = pd.read_csv(file_name)
     longitude = []
     latitude = []
     full_address = []
@@ -95,7 +94,9 @@ def convert_address_to_lat_and_lng(city_name, key):
             full_address.append(formatted_address)
     data['latitude'] = latitude
     data['longitude'] = longitude
-    data['full_address'] = full_address
+    # data.drop(["address"])
+    # data['full_address'] = full_address
+    data['address'] = full_address
     write_data_to_csv(data, city_name)
 
 
@@ -108,8 +109,8 @@ def get_latitude_and_longitude(location, key):
     return data
 
 
-def write_data_to_csv(data, file_name):
-    data.to_csv("./new" + file_name + '.csv')
+def write_data_to_csv(data, city_name):
+    data.to_csv(city_name + '_new.csv')
 
 
 def get_google_key():

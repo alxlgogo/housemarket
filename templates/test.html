@@ -25,6 +25,7 @@
                 <div class="row align-items-center"
                      style="border: 1px lightgrey solid;">
                     <div class="col-md-12" id="city_radio">
+                        <h2>select city</h2>
                         <span class="ml-4">
                             <input type="radio" name="cityName" value="Dublin" checked> Dublin
                         </span>
@@ -34,21 +35,41 @@
                         <div>
                             <h2>get renting house or selling house</h2>
                             <span class="ml-4">
-                            <input type="radio" name="dataType" value="renting"> renting
-                        </span>
+                                <input type="radio" name="dataType" value="renting"> renting
+                            </span>
                             <span class="ml-4">
-                            <input type="radio" name="dataType" value="selling" checked> selling
-                        </span>
+                                <input type="radio" name="dataType" value="selling" checked> selling
+                            </span>
                         </div>
-                        <div>
-                            <input type="text" name="pageNumber">
-                        </div>
+                        Input page number:<input type="text" name="pageNumber">
                     </div>
-
                 </div>
-
                 <button type="submit" class="btn btn-primary">
                     Submit
+                </button>
+            </form>
+        </div>
+        <div class="col-md-12" style="margin-top: 50px">
+            <h1>2.convert address into latitude and longitude</h1>
+            <form role="form" method="POST" action="/convert_address">
+
+                <h2>select city</h2>
+                <span class="ml-4">
+                    <input type="radio" name="cityName" value="Dublin" checked> Dublin
+                </span>
+                <span class="ml-4">
+                    <input type="radio" name="cityName" value="Cork"> Cork
+                </span>
+
+                <h2>select data type</h2>
+                <span class="ml-4">
+                    <input type="radio" name="dataType" value="renting"> renting
+                </span>
+                <span class="ml-4">
+                    <input type="radio" name="dataType" value="selling" checked> selling
+                </span>
+                <button type="submit" class="btn btn-primary">
+                    convert_addr_to_lat_logt
                 </button>
             </form>
         </div>

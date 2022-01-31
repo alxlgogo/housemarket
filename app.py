@@ -293,12 +293,18 @@ def get_data():
         base_url = "https://www.myhome.ie/residential/dublin/property-for-sale?page="
         city_name = city_name + "_sell"
     scrape_data(city_name, city_name, page_number, base_url)
-    return render_template('data.html')
+    return render_template('test.html')
 
 
-@app.route('/convertAddress', methods=['GET', 'POST'])
+@app.route('/convert_address', methods=['GET', 'POST'])
 def convert_address():
     city_name = request.form['cityName']
+    data_type = request.form['dataType']
+    if data_type.__eq__("renting"):
+        city_name = city_name + "_rent"
+    else:
+        city_name = city_name + "_sell"
     key = get_google_key()
-    convert_address_to_lat_and_lng(city_name, key)
-    return render_template('data.html')
+    convert_address_to_lat_and_lng("./data/" + city_name, key)
+
+    return render_template('test.html')

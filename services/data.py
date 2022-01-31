@@ -13,7 +13,7 @@ def get_urls(city_name, page_number, base_url):
     # base_url = "https://www.myhome.ie/rentals/" + city_name + "/property-to-rent?page="
     # base_url = "https://www.myhome.ie/rentals/dublin/property-to-rent-in-dublin-12?page="
     urls = []
-    if page_number == 1:
+    if page_number == "1":
         urls.append(base_url + "1")
     else:
         for x in range(1, int(page_number)):
@@ -74,6 +74,7 @@ def scrape_data(city_name, file_name, page_number, base_url):
 def convert_address_to_lat_and_lng(city_name, key):
     file_name = city_name + '.csv'
     data = pd.read_csv(file_name)
+    data = remove_data_unit(data)
     longitude = []
     latitude = []
     full_address = []
@@ -99,6 +100,39 @@ def convert_address_to_lat_and_lng(city_name, key):
     data['address'] = full_address
     write_data_to_csv(data, city_name)
 
+
+def remove_data_unit(data):
+    beds = data['bed']
+    new_beds = []
+    for bed in beds:
+        if pd.isnull(bed):
+            new_beds.append(bed)
+        else:
+            per = bed.split(" ")[0].strip()
+            #     print(per)
+            new_beds.append(per)
+    data["bed"] = new_beds
+
+    bathes = data['bath']
+    new_bathes = []
+    for bath in bathes:
+        if pd.isnull(bath):
+            new_bathes.append(bath)
+        else:
+            per = bath.strip().split("bath")[0].strip()
+            new_bathes.append(per)
+    data["bath"] = new_bathes
+
+    cubes = data['cube']
+    new_cubes = []
+    for cube in cubes:
+        if pd.isnull(cube):
+            new_cubes.append(cube)
+        else:
+            per = cube.strip().split("m")[0].strip()
+            new_cubes.append(per)
+    data['cube'] = new_cubes
+    return data
 
 def get_latitude_and_longitude(location, key):
     base_url = "https://maps.googleapis.com/maps/api/geocode/json?address="

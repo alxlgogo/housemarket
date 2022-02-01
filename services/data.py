@@ -27,14 +27,22 @@ def get_soup(url):
     return soup
 
 
-def parse_page(soup, writer):
+def parse_page(soup, writer, data_type):
     houses = soup.find_all("div", {"class": "PropertyListingCard__PropertyInfo"})
     for house in houses:
         address = house.find("a", {"class": "PropertyListingCard__Address"}).text
         area = address.split(',')[-1].strip()
         # print(address)
         price = house.find("div", {"class": "PropertyListingCard__Price"}).text
-        price = price.replace(" ", "").replace(",", "").replace("€", "")
+
+        if data_type.__eq__("selling"):
+            price = price.replace(" ", "").replace(",", "").replace("€", "")
+        else:
+            prices = price.split("/")
+            price = prices[0]
+            if "to" in prices[0]:
+                price = prices[0].split("to")[0]
+            price = price.replace(" ", "").replace(",", "").replace("€", "")
         # print(price)
         spans = house.find_all("span", {"class": "PropertyInfoStrip__Detail"})
         # print(spans)
@@ -60,14 +68,14 @@ def parse_page(soup, writer):
         writer.writerow([bed, bath, cube, home, price, area, address])
 
 
-def scrape_data(city_name, file_name, page_number, base_url):
+def scrape_data(city_name, file_name, page_number, base_url, data_type):
     file = open("./data/" + file_name + '.csv', 'w')
     writer = csv.writer(file)
     writer.writerow(['bed', 'bath', 'cube', 'home', 'price', 'area', 'address'])
     urls = get_urls(city_name, page_number, base_url)
     for url in urls:
         soup = get_soup(url)
-        parse_page(soup, writer)
+        parse_page(soup, writer, data_type)
     file.close()
 
 
@@ -133,6 +141,7 @@ def remove_data_unit(data):
             new_cubes.append(per)
     data['cube'] = new_cubes
     return data
+
 
 def get_latitude_and_longitude(location, key):
     base_url = "https://maps.googleapis.com/maps/api/geocode/json?address="

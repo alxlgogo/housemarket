@@ -292,7 +292,7 @@ def get_data():
         # base_url = "https://www.myhome.ie/rentals/dublin/property-to-rent-in-dublin-12?page="
         base_url = "https://www.myhome.ie/residential/dublin/property-for-sale?page="
         city_name = city_name + "_sell"
-    scrape_data(city_name, city_name, page_number, base_url)
+    scrape_data(city_name, city_name, page_number, base_url,data_type)
     return render_template('test.html')
 
 

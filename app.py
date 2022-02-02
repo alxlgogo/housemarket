@@ -1,3 +1,5 @@
+import json
+
 import pandas as pd
 import numpy as np
 import statsmodels.api as sm
@@ -5,6 +7,7 @@ from flask import Flask, render_template, request, jsonify
 from models.house import house
 from services.scrapeData import getHouseData, getHouseLocation
 from services.data import scrape_data, convert_address_to_lat_and_lng, get_google_key
+from collections import OrderedDict
 
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
@@ -292,7 +295,7 @@ def get_data():
         # base_url = "https://www.myhome.ie/rentals/dublin/property-to-rent-in-dublin-12?page="
         base_url = "https://www.myhome.ie/residential/dublin/property-for-sale?page="
         city_name = city_name + "_sell"
-    scrape_data(city_name, city_name, page_number, base_url,data_type)
+    scrape_data(city_name, city_name, page_number, base_url, data_type)
     return render_template('test.html')
 
 
@@ -308,3 +311,19 @@ def convert_address():
     convert_address_to_lat_and_lng("./data/" + city_name, key)
 
     return render_template('test.html')
+
+
+@app.route('/rent_house_pie', methods=['GET', 'POST'])
+def rent_house_pie():
+    data = pd.read_csv('data/Dublin_rent_new.csv')
+    arr = data["home"].value_counts()
+    total = sum(arr)
+    percentage = []
+    indexs = arr.index
+    for a in arr:
+        percentage.append(round(a / total * 100, 2))
+    a = np.array(indexs)
+    b = np.array(percentage)
+    pie_data = pd.DataFrame(OrderedDict({'type': pd.Series(a), 'percentage': pd.Series(b)})).to_json(orient="records")
+    pie_data = json.loads(pie_data)
+    return render_template('rent_house_pie.html', pie_data=pie_data)

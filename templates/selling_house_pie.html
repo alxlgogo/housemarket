@@ -62,9 +62,8 @@
     </p>
 </figure>
 
-
 <figure class="highcharts-figure">
-    <div id="container2"></div>
+    <div id="area_percentage"></div>
     <p class="highcharts-description">
         This graph shows the current share of housing rental types in Dublin.
     </p>
@@ -141,9 +140,8 @@
     });
 
 
-
     // Build the chart
-    Highcharts.chart('container2', {
+    Highcharts.chart('area_percentage', {
         chart: {
             plotBackgroundColor: null,
             plotBorderWidth: null,
@@ -181,9 +179,9 @@
                 {#{name: 'Safari', y: 4.18},#}
                 {#{name: 'Other', y: 7.05}#}
 
-                {% for per in pie_data %}
+                {% for per in area_pie_data %}
                     {
-                        name: '{{ per['type'] }}',
+                        name: '{{ per['area'] }}',
                         y: {{ per['percentage'] }},
                     },
                 {% endfor %}

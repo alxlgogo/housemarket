@@ -326,4 +326,38 @@ def rent_house_pie():
     b = np.array(percentage)
     pie_data = pd.DataFrame(OrderedDict({'type': pd.Series(a), 'percentage': pd.Series(b)})).to_json(orient="records")
     pie_data = json.loads(pie_data)
+
     return render_template('rent_house_pie.html', pie_data=pie_data)
+
+
+@app.route('/sell_house_pie', methods=['GET', 'POST'])
+def sell_house_pie():
+    data = pd.read_csv('data/Dublin_sell.csv')
+    arr = data["home"].value_counts()
+    total = sum(arr)
+    percentage = []
+    indexs = arr.index
+    for a in arr:
+        percentage.append(round(a / total * 100, 2))
+    a = np.array(indexs)
+    b = np.array(percentage)
+    pie_data = pd.DataFrame(OrderedDict({'type': pd.Series(a), 'percentage': pd.Series(b)})).to_json(orient="records")
+    pie_data = json.loads(pie_data)
+
+    # Regional housing ratio
+    area_arr = data["area"].value_counts().to_frame()
+    area_arr = area_arr.drop(area_arr[area_arr['area'] < 10].index)
+    area_arr_new = area_arr["area"]
+
+    area_arr_total = sum(arr)
+    area_percentage = []
+    area_indexs = area_arr_new.index
+    for per in area_arr_new:
+        area_percentage.append(round(per / area_arr_total * 100, 2))
+
+    area_ser = np.array(area_indexs)
+    percentage_ser = np.array(area_percentage)
+    area_pie_data = pd.DataFrame(
+        OrderedDict({'area': pd.Series(area_ser), 'percentage': pd.Series(percentage_ser)})).to_json(orient="records")
+    area_pie_data = json.loads(area_pie_data)
+    return render_template('selling_house_pie.html', pie_data=pie_data, area_pie_data=area_pie_data)

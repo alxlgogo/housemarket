@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Scrape data</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="{{ url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/app/chart.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/app/home.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .scrape-data-pic, .scrape-data-form, .scrape-data-des {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .scrape-data-pic, .scrape-data-form {
+            border-right: lightblue 1px solid;
+        }
+
+        .highcharts-figure,
+        .highcharts-data-table table {
+            min-width: 360px;
+            max-width: 800px;
+            margin: 1em auto;
+        }
+
+        .highcharts-data-table table {
+            font-family: Verdana, sans-serif;
+            border-collapse: collapse;
+            border: 1px solid #ebebeb;
+            margin: 10px auto;
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .highcharts-data-table caption {
+            padding: 1em 0;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .highcharts-data-table th {
+            font-weight: 600;
+            padding: 0.5em;
+        }
+
+        .highcharts-data-table td,
+        .highcharts-data-table th,
+        .highcharts-data-table caption {
+            padding: 0.5em;
+        }
+
+        .highcharts-data-table thead tr,
+        .highcharts-data-table tr:nth-child(even) {
+            background: #f8f8f8;
+        }
+
+        .highcharts-data-table tr:hover {
+            background: #f1f7ff;
+        }
+
+    </style>
+</head>
+<body style="">
+
+{# Head #}
+<div class="container-fluid"
+     style="padding: 30px 40px;">
+    <div class="row">
+        <div class="col-md-2">
+            <img src="{{ url_for('static',filename='img/logo1.jpeg') }}" alt="My Home Logo" width="200" height="80"
+                 class="DesktopHeader__Logo">
+        </div>
+        <div class="col-md-10">
+            <h1>
+                Selling OR Buying ! <small>Irish House Price Forecast</small>
+            </h1>
+
+            <ul class="nav" style="margin-top: 30px;font-size: 22px">
+                 <li class="nav-item">
+                    <a class="nav-link" href="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/go_to_scrape_data">Scrape data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/go_to_clean_data">Clean data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Selling Price recommend</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Rental price recommend</a>
+                </li>
+                <li class="nav-item dropdown ml-md-auto">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
+                       data-toggle="dropdown">Dropdown link</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another
+                        action</a> <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider">
+                        </div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+{# content #}
+<div class="container-fluid" style="border: lightblue solid 1px">
+    <div class="row">
+        <div class="col-md-4 scrape-data-pic">
+            <h2 style="text-align: center">Clean data</h2>
+            <img style="width: 100%;align-self: center;" alt="scrape-data-pic"
+                 src="{{ url_for('static',filename='img/clean_data2.png') }}"/>
+        </div>
+        <div class="col-md-3 scrape-data-form">
+            <form role="form" action="/clean_data" id="scrape_data_form" method="POST" style="margin-left: 35px">
+                {#            <form role="form" id="scrape_data_form" style="margin-left: 35px">#}
+                <div class="form-group">
+                    <label for="exampleInputPassword1">
+                        <h5>City:</h5>
+                    </label>
+                    <div>
+                        <span class="mr-4">
+                            <input type="radio" name="cityName" value="Dublin" checked> Dublin
+                        </span>
+                        <span class="mr-4">
+                            <input type="radio" name="cityName" value="Cork"> Cork
+                        </span>
+                        <span class="mr-4">
+                            <input type="radio" name="cityName" value="Galway"> Galway
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">
+                        <h5>Type:</h5>
+                    </label>
+                    <div>
+                        <span class="mr-4">
+                        <input type="radio" name="dataType" value="renting"> renting
+                    </span>
+                        <span class="mr-4">
+                        <input type="radio" name="dataType" value="selling" checked> selling
+                    </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-3">
+                        <label for="pageNumber">
+                            <h5>
+                                Number:
+                            </h5>
+                        </label>
+                        <input type="text" class="form-control" name="pageNumber" style="width: 50%"/>
+                    </div>
+                </div>
+                <button type="submit" id="form_submit" class="btn btn-info">
+                    Submit
+                </button>
+            </form>
+        </div>
+        <div class="col-md-5 scrape-data-des">
+            <dl>
+                <dt>
+                    City:
+                </dt>
+                <dd>
+                    Here are the three largest cities in Ireland.
+                </dd>
+                <dd>
+                    There is a lot of information for rent and sale, suitable for analysis.
+                </dd>
+                <dt>
+                    Type:
+                </dt>
+                <dd>
+                    The data on rentals and sales are separate.
+                </dd>
+                <dd>
+                    renting：scrape home sales information.
+                </dd>
+                <dd>
+                    selling：scrape rental information.
+                </dd>
+                <dt>
+                    Number:
+                </dt>
+                <dd>
+                    Manually set how many pages of data to Scrape.
+                </dd>
+                <dt>
+                    Submit:
+                </dt>
+                <dd>
+                    When you click submit, the data will be fetched.
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+
+{# data table #}
+<div class="row" style="border: 1px lightgrey solid;background: #f3f6f7;margin-top: 20px;margin-bottom: 20px">
+    <div class="col-md-2" style="margin: auto;text-align: center">
+        <h1>Clean data</h1>
+    </div>
+    <div class="col-md-10">
+        <table class="table">
+            <thead>
+            <tr>
+                {% for head in heads %}
+                    <th>
+                        {{ head }}
+                    </th>
+                {% endfor %}
+            </tr>
+            </thead>
+            <tbody id="tablePage">
+            {% for table in row_data %}
+                <tr>
+                    {% for per in table %}
+                        <td>{{ per }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <nav aria-label="Page navigation example ">
+            <ul class="pagination" id="pageList">
+                <li class="page-item">
+                    <a class="page-link" href="javascript:pre()" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+
+                 {% for page in pages %}
+                    <li class="page-item"><a class="page-link" href="javascript:nPage(
+                        {{ page }}
+                        )">
+                    {{ page }}
+                    </a></li>
+                {% endfor %}
+
+{#                <li class="page-item"><a class="page-link" href="javascript:nPage(1)">1</a></li>#}
+{#                <li class="page-item"><a class="page-link" href="javascript:nPage(2)">2</a></li>#}
+{#                <li class="page-item"><a class="page-link" href="javascript:nPage(3)">3</a></li>#}
+{#                <li class="page-item"><a class="page-link" href="javascript:nPage(4)">4</a></li>#}
+{#                <li class="page-item"><a class="page-link" href="javascript:nPage(5)">5</a></li>#}
+{#                <li class="page-item"><a class="page-link" href="javascript:nPage(6)">6</a></li>#}
+                <li class="page-item">
+                    <a class="page-link" href="javascript:next()" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+{# Footer #}
+<div class="container-fluid mt-5">
+    <div class="card bg-white">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <div class="footer-text pull-left">
+                    <div class="d-flex">
+                        <h1 class="font-weight-bold mr-2 px-3" style="color:white; background-color:#5bc0de">
+                            V </h1>
+                        <h1 style="color: #5bc0de">Devs</h1>
+                    </div>
+                    <p class="card-text">
+                        Technological University of the Shannon: Midlands Midwest, Athlone Campus, University Road,
+                        Athlone, Co. Westmeath, N37HD68, Ireland
+                    </p>
+                    <div class="social mt-2 mb-3"><i class="fa fa-facebook-official fa-lg"></i> <i
+                            class="fa fa-instagram fa-lg"></i> <i class="fa fa-twitter fa-lg"></i> <i
+                            class="fa fa-linkedin-square fa-lg"></i> <i class="fa fa-facebook"></i></div>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-2"></div>
+            <div class="col-md-2 col-sm-2 col-xs-2">
+                <h5 class="heading">Services</h5>
+                <ul>
+                    <li>IT Consulting</li>
+                    <li>Development</li>
+                    <li>Cloud</li>
+                    <li>Support</li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-2">
+                <h5 class="heading">Industries</h5>
+                <ul class="card-text">
+                    <li>Finance</li>
+                    <li>Public Sector</li>
+                    <li>Smart Office</li>
+                    <li>Retail</li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-2">
+                <h5 class="heading">Company</h5>
+                <ul class="card-text">
+                    <li>About Us</li>
+                    <li>Blog</li>
+                    <li>Contact</li>
+                    <li>Join Us</li>
+                </ul>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="row" style="font-size:10px;">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="pull-left">
+                    <p><i class="fa fa-copyright"></i> 2021 WENJING</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="pull-right mr-4 d-flex policy">
+                    <div>Terms of Use</div>
+                    <div>Privacy Policy</div>
+                    <div>Cookie Policy</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+<script src=" {{ url_for('static',filename='js/scripts.js') }}"></script>
+<script src=" {{ url_for('static',filename='js/app/mytable.js') }}"></script>
+<script src=" {{ url_for('static',filename='js/app/mychart.js') }}"></script>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
+<script>
+    Highcharts.chart('container', {
+
+            title: {
+                text: 'Ireland house price, 1976-2015'
+            },
+
+            subtitle: {
+                text: 'Source: https://data.gov.ie/'
+            },
+
+            yAxis: {
+                title: {
+                    text: 'Price €'
+                }
+            },
+
+            xAxis: {
+                accessibility: {
+                    rangeDescription: 'Range: 1976 to 2015'
+                }
+            },
+
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle'
+            },
+
+            plotOptions: {
+                series: {
+                    label: {
+                        connectorAllowed: false
+                    },
+                    pointStart: 1976
+                }
+            },
+            series: [
+                {% for ser in series %}
+                    {
+                        name: "{{ ser['name'] }}",
+                        data:{{ ser['data'] }}
+                    },
+                {% endfor %}
+            ],
+
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
+            }
+
+        }
+    );
+
+
+</script>
+</body>
+</html>

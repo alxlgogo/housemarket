@@ -8,6 +8,7 @@ from models.house import house
 from services.scrapeData import getHouseData, getHouseLocation
 from services.data import scrape_data, convert_address_to_lat_and_lng, get_google_key
 from collections import OrderedDict
+from statsmodels.tsa.arima.model import ARIMA
 
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
@@ -217,8 +218,39 @@ def monitor():
     temp3 = np.array(diff1.dropna())
     difference_adf = getAdf(temp3)
 
+    # bulidl model
+    arima_model = ARIMA(diff1.dropna(), order=(1, 1, 2))
+    model_fit = arima_model.fit()
+    # model_fit.summary()
+
+    # Prediction
+    predict_ts = model_fit.forecast(16)
+
+    # diff1 restoration
+    diff_shift_ts = predict_ts.shift(1).dropna()
+
+    # move restoration
+    rol_sum = diff_shift_ts.rolling(window=4).sum()
+    rol_recover = rol_sum * 12 - rol_sum.shift(1)
+
+    # log restoration
+    log_recover = np.exp(rol_recover)
+    log_recover.dropna(inplace=True)
+    years = []
+    prices = []
+    for per in log_recover.index:
+        years.append(per.year)
+    for per in log_recover:
+        prices.append(round(per, 2))
+    series_1 = pd.Series(years)
+    series_2 = pd.Series(prices)
+    prediction_result = pd.DataFrame(columns=['year', 'price'])
+    prediction_result['year'] = series_1
+    prediction_result['price'] = series_2
+
     return render_template('monitor.html', heads=column_names, row_data=row_data, series=series, log_Adf=log_Adf,
-                           avg_adf=avg_adf, difference_adf=difference_adf, citys=citys, zip=zip)
+                           avg_adf=avg_adf, difference_adf=difference_adf, citys=citys,
+                           prediction_result=prediction_result, zip=zip)
 
 
 @app.route("/adf_log", methods=["GET", "POST"])

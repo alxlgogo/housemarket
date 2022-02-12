@@ -462,7 +462,12 @@ def rent_house_pie():
     pie_data = pd.DataFrame(OrderedDict({'type': pd.Series(a), 'percentage': pd.Series(b)})).to_json(orient="records")
     pie_data = json.loads(pie_data)
 
-    return render_template('rent_house_pie.html', pie_data=pie_data)
+    # bed number presentage
+    bed_pie_data = get_bed_pie_data(data)
+    bath_pie_data = get_bath_pie_data(data)
+    area_percentage_data = get_area_percentage_data(data)
+    return render_template('rent_house_pie.html', pie_data=pie_data, bed_pie_data=bed_pie_data,
+                           bath_pie_data=bath_pie_data, area_percentage_data=area_percentage_data)
 
 
 @app.route('/sell_house_pie', methods=['GET', 'POST'])
@@ -495,7 +500,57 @@ def sell_house_pie():
     area_pie_data = pd.DataFrame(
         OrderedDict({'area': pd.Series(area_ser), 'percentage': pd.Series(percentage_ser)})).to_json(orient="records")
     area_pie_data = json.loads(area_pie_data)
+
     return render_template('selling_house_pie.html', pie_data=pie_data, area_pie_data=area_pie_data)
+
+
+def get_bed_pie_data(data):
+    bed_arr = data["bed"].value_counts()
+    bed_total = sum(bed_arr)
+    bed_percentage = []
+    bed_indexs = np.int_(bed_arr.index)
+    for a in bed_arr:
+        bed_percentage.append(round(a / bed_total * 100, 2))
+    bed_a = np.array(bed_indexs)
+    bed_b = np.array(bed_percentage)
+    bed_pie_data = pd.DataFrame(OrderedDict({'type': pd.Series(bed_a), 'percentage': pd.Series(bed_b)})).to_json(
+        orient="records")
+    bed_pie_data = json.loads(bed_pie_data)
+    return bed_pie_data
+
+
+def get_bath_pie_data(data):
+    bath_arr = data["bath"].value_counts()
+    bath_total = sum(bath_arr)
+    bath_percentage = []
+    bath_indexs = np.int_(bath_arr.index)
+    for a in bath_arr:
+        bath_percentage.append(round(a / bath_total * 100, 2))
+    bath_a = np.array(bath_indexs)
+    bath_b = np.array(bath_percentage)
+    bath_pie_data = pd.DataFrame(OrderedDict({'type': pd.Series(bath_a), 'percentage': pd.Series(bath_b)})).to_json(
+        orient="records")
+    bath_pie_data = json.loads(bath_pie_data)
+    return bath_pie_data
+
+
+def get_area_percentage_data(data):
+    area_arr = data["area"].value_counts().to_frame()
+    area_arr = area_arr.drop(area_arr[area_arr['area'] < 10].index)
+    area_arr_new = area_arr["area"]
+    arr = data["area"].value_counts()
+    area_arr_total = sum(arr)
+    area_percentage = []
+    area_indexs = area_arr_new.index
+    for per in area_arr_new:
+        area_percentage.append(round(per / area_arr_total * 100, 2))
+
+    area_ser = np.array(area_indexs)
+    percentage_ser = np.array(area_percentage)
+    area_pie_data = pd.DataFrame(
+        OrderedDict({'type': pd.Series(area_ser), 'percentage': pd.Series(percentage_ser)})).to_json(orient="records")
+    area_pie_data = json.loads(area_pie_data)
+    return area_pie_data
 
 
 @app.route('/data', methods=['GET', 'POST'])

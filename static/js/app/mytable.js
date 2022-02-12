@@ -9,7 +9,7 @@ var pageSize = 10;
 var pageSize = 7;
 var page = 1;
 
-//清除列表的active样式
+
 function clearActive() {
     for (var i = 1; i < spanPageN.length - 1; i++) {
         console.log(spanPageN[i].id);
@@ -17,13 +17,13 @@ function clearActive() {
     }
 }
 
-//下一页
+//next page
 function next() {
     hideTable();
-    //当前最后一行行数
+    //the last column of this page
     currentRow = pageSize * page;
     maxRow = currentRow + pageSize;
-    // 判断是否到了table最后几行数据
+
     if (maxRow > numberRowsInTable) {
         maxRow = numberRowsInTable;
     }
@@ -39,7 +39,7 @@ function next() {
     showPageActive(page);
 }
 
-//上一页
+//previous page
 function pre() {
 
     hideTable();
@@ -49,7 +49,6 @@ function pre() {
     maxRow = currentRow - pageSize;
     if (currentRow > numberRowsInTable) currentRow = numberRowsInTable;
     for (var i = maxRow; i < currentRow; i++) {
-        //清除display样式，display将使用默认
         theTable.rows[i].style.display = '';
     }
 
@@ -62,7 +61,7 @@ function pre() {
 
 }
 
-//第几页
+//page number
 function nPage(n) {
     hideTable();
 
@@ -92,9 +91,8 @@ function hideTable() {
     }
 }
 
-//将当前页设为active
+//set current page as active
 function showPageActive(p) {
-    //清除之前的
     clearActive();
     var nowpage = document.getElementById('spanpage' + p);
     console.log(nowpage.id);
@@ -102,23 +100,20 @@ function showPageActive(p) {
 
 }
 
-//总共页数
+//total page
 function pageCount() {
     var count = 0;
-    //判断是否整除
     if (numberRowsInTable % pageSize != 0) count = 1;
     return parseInt(numberRowsInTable / pageSize) + count;
 }
 
 
-//上一页下一页链接的禁用和打开
 function preOn() {
     spanPre.innerHTML = " <a href='javascript:pre();'>&laquo;</a>";
     spanPre.setAttribute("class", "");
 }
 
 function preOff() {
-    //bootstrap设置禁用样式之后还是可以点击一次，所以这里直接修改innerHTML解决这个问题。
     spanPre.innerHTML = " <a href='javascript:void(0);'>&laquo;</a>";
     spanPre.className = "disabled";
 }
@@ -134,7 +129,6 @@ function nextOff() {
 }
 
 
-//隐藏表格 ,只显示第一页的内容
 function hide() {
     for (var i = pageSize; i < numberRowsInTable; i++) {
         theTable.rows[i].style.display = 'none';

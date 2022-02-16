@@ -448,8 +448,8 @@ def convert_address():
     return render_template('test.html')
 
 
-@app.route('/rent_house_pie', methods=['GET', 'POST'])
-def rent_house_pie():
+@app.route('/rental_market', methods=['GET', 'POST'])
+def rental_market():
     data = pd.read_csv('data/Dublin_rent_new.csv')
     arr = data["home"].value_counts()
     total = sum(arr)
@@ -466,7 +466,7 @@ def rent_house_pie():
     bed_pie_data = get_bed_pie_data(data)
     bath_pie_data = get_bath_pie_data(data)
     area_percentage_data = get_area_percentage_data(data)
-    return render_template('rent_house_pie.html', pie_data=pie_data, bed_pie_data=bed_pie_data,
+    return render_template('rental_market.html', pie_data=pie_data, bed_pie_data=bed_pie_data,
                            bath_pie_data=bath_pie_data, area_percentage_data=area_percentage_data)
 
 

@@ -1,0 +1,421 @@
+,bed,bath,cube,home,price,area,address,latitude,longitude
+0,1,1,39,Studio,1400,D07 Y2H2,"7 St Attracta Rd, Cabra East, Dublin 7, D07 R898, Ireland",53.3641303,-6.2823248
+1,2,2,86,Apartment,2400,D15K2CW,"Ashtown, Dublin, Ireland",53.3764326,-6.332588599999999
+2,1,,,Studio,1200,D15 C1HD,"6 Ballentree Villas, Tyrrelstown, Dublin 15, D15 C1HD, Ireland",53.4170476,-6.3851727
+3,2,1,,Semi-Detached,950,Dublin 24,"Citywest Rd, Citywest, Dublin, Ireland",53.2785495,-6.4181215
+4,2,2,,Apartment,3500,Dublin 18,"Apartment 24, Hollybrook, Brighton Rd, Kerrymount, Dublin 18, Ireland",53.2641044,-6.1812128
+5,2,1,85,Apartment,2500,Dublin 4,"11 Dock Mill, Barrow Street, Dublin 4, Co. Dublin, Ireland",53.3404057,-6.2370888
+6,3,3,,Apartment,2180,Dublin 15,"Ongar House, Ongar Square, Ongar Village, Clonsilla, Dublin 15, D15 X6XK, Ireland",53.395096,-6.438390099999999
+7,2,2,877,Apartment,2700,Dublin 6W,"Mount Tallant Ave, Terenure, Dublin, Ireland",53.3162269,-6.2815794
+8,2,2,,Apartment,1900,Dublin 16,"16 Ballintyre Walk, Ballinteer, Dublin 16, D16 X520, Ireland",53.2739611,-6.2530382
+9,3,1,,Terraced House,2200,Dublin 22,"22 Cherrywood Park, Fairview, Dublin 22, D22 DC53, Ireland",53.3176978,-6.4152185
+10,2,2,80,Apartment,2200,D18 Y535,"One Beacon, Beacon Court, Sandyford, Dublin, Co. Dublin, Ireland",53.276225,-6.2207062
+11,1,1,32ft 2,Apartment,1200,D07V6V9,"345 Navan Rd, Ashtown, Dublin 7, D07 V6V9, Ireland",53.36973589999999,-6.3238141
+12,2,1,,House,2950,Dublin 8,"St. James's Gate, Saint Catherine's, Dublin 8, D08 VF8H, Ireland",53.341978,-6.2867111
+13,2,1,,Apartment,2595,Dublin,"6 Tivoli Terrace N, Dún Laoghaire, Dublin, A96 A438, Ireland",53.2908454,-6.141571099999999
+14,1,1,,Apartment,1530,Dublin 1,"Rotunda, Dublin 1, D01 N528, Ireland",53.3514264,-6.2640812
+15,5,4,436,Semi-Detached,15000,County Dublin,"Dunamara, Strand Rd, Hackettsland, Killiney, Co. Dublin, Ireland",53.25099729999999,-6.1128608
+16,1,1,,Apartment,292,Dublin,"123 Summerhill, Mountjoy, Dublin, D01 TY46, Ireland",53.3548925,-6.2557085
+17,1,1,,Apartment,263,Dublin,"123 Summerhill, Mountjoy, Dublin, D01 TY46, Ireland",53.3548925,-6.2557085
+18,1,1,,Apartment,251,Dublin,"123 Summerhill, Mountjoy, Dublin, D01 TY46, Ireland",53.3548925,-6.2557085
+19,3,2,,House,4000,County Dublin,"Pembroke, 7 Mounttown Lower, Glenageary, Monkstown, Co. Dublin, A96 T3K6, Ireland",53.2878905,-6.1451752
+20,3,1,,Terraced House,2900,Dublin 6W,"6 Fergus Rd, Terenure, Dublin 6W, Co. Dublin, D6W PR99, Ireland",53.3083973,-6.2858581
+21,4,3,174,Detached,3700,County Dublin,"26 Newtownpark Ave, Holly Park Ave, Blackrock, Co. Dublin, A94 PX32, Ireland",53.2810839,-6.176188
+22,3,2,1100ft 2,Apartment,3500,Dublin 2,"2 Charlemont Ln, Clontarf, Dublin, Ireland",53.3644415,-6.225
+23,2,2,,Apartment,2014,Dublin,"Millrace Rd, Ashtown, Dublin, Ireland",53.37272309999999,-6.3360501
+24,2,2,106,Apartment,4000,Dublin 4,"Lansdowne Rd, Dublin, Ireland",53.3331103,-6.2328706
+25,1,1,,Terraced House,1500,Dublin 14,"Goatstown Cottages, 1 Goatstown Rd, Mountanville, Dublin 14, D14 X6T0, Ireland",53.29296369999999,-6.229421299999999
+26,1,1,,Terraced House,1800,Dublin 14,"Goatstown Cottages, 1 Goatstown Rd, Mountanville, Dublin 14, D14 X6T0, Ireland",53.29296369999999,-6.229421299999999
+27,6,4,450,Detached,14000,County Dublin,"Saintbury Ave, Killiney, Dublin, Ireland",53.2582894,-6.117935699999999
+28,1,1,,Apartment,1500,Dublin 20,"Mill Race, Martin's Row, Chapelizod, Dublin 20, Ireland",53.3498649,-6.345567099999999
+29,3,2,,Apartment,2000,Dublin 24,"Marlfield Lawn, Kiltipper, Dublin, Ireland",53.2707002,-6.3698831
+30,3,1,,Apartment,2142,Dublin 8,"Longmeadows Apartments, Conyngham Rd, Saint James' (part of Phoenix Park), Dublin 8, Ireland",53.3479593,-6.3001434
+31,3,2,100,Apartment,4645,Dublin 1,"Quayside Quarter, Dublin Landings, 76 N Wall Quay, North Dock, Dublin 1, Ireland",53.3471988,-6.2326983
+32,2,1,,Semi-Detached,1600,Dublin 22,"22 Rowlagh Ave, Ronanstown, Dublin 22, D22 C9E2, Ireland",53.3430362,-6.4040292
+33,6,6,,Semi-Detached,16000,Dublin 4,"4 Merrion Court, Ailesbury Rd, Ballsbridge, Dublin, D04 YX65, Ireland",53.3202875,-6.214413599999999
+34,2,2,,Apartment,2188,Dublin,"Galloping Green, Stillorgan Rd, Galloping Green North, Blackrock, Co. Dublin, Ireland",53.2799235,-6.1860366
+35,2,2,,Apartment,2995,Dublin,"The Dickens Gasworks, S Lotts Rd, Dublin, Co. Dublin, 4, Ireland",53.33861899999999,-6.2346751
+36,2,2,,Apartment,2300,Dublin 18,"Apartment 10, El Pinar, Kilgobbin Rd, Sandyford, Dublin 18, Ireland",53.265958,-6.2169175
+37,1,1,,Studio,1422,Dublin,"Derry Avin, N Circular Rd, Stoneybatter, Dublin 7, Ireland",53.35368450000001,-6.2952638
+38,3,2,,Terraced House,2650,Dublin 3,"St Mary's Rd, North Dock, Dublin, Ireland",53.3539055,-6.236366200000001
+39,2,2,,Apartment,1890,Dublin 9,"9 St Alphonsus' Rd Upper, Botanic, Dublin, Ireland",53.36551619999999,-6.262212799999999
+40,2,2,83,Apartment,3245,Dublin 1,"Quayside Quarter, Dublin Landings, 76 N Wall Quay, North Dock, Dublin 1, Ireland",53.3471988,-6.2326983
+41,1,1,55,Apartment,1900,Dublin 4,"4 Percy Pl, Ballsbridge, Dublin 4, D04 V9T3, Ireland",53.33589869999999,-6.2424387
+42,5,5,320,House,15000,Dublin 4,"4 Wellington Rd, Ballsbridge, Dublin, D04 A443, Ireland",53.3312463,-6.2402731
+43,3,2,92,Apartment,3925,Dublin 2,"41 Forbes St, Grand Canal Dock, Dublin 2, Ireland",53.3453664,-6.2384166
+44,5,3,175,Detached,4500,Dublin 6,"22 Palmerston Grove, Rathmines, Dublin 6, D06 K2W1, Ireland",53.3165388,-6.2416049
+45,5,5,,Detached,14950,Dublin,"Castle Park Rd, Dalkey, Dublin, Ireland",53.2840356,-6.1120133
+46,2,2,,Apartment,4200,Dublin,"Marine Rd, Dún Laoghaire, Dublin, Ireland",53.2940124,-6.1337128
+47,6,4,,Semi-Detached,8950,Dublin,"Tivoli Terrace N, Dún Laoghaire, Dublin, Ireland",53.2906957,-6.142044100000001
+48,5,5,8000ft 2,Detached,8950,Dublin,"Malahide, Co. Dublin, Ireland",53.4470841,-6.1534658
+49,3,2,,Detached,4200,Dublin 8,"17 Synge St, Saint Kevin's, Dublin 8, D08 XV74, Ireland",53.332958,-6.2672102
+50,2,2,,Terraced House,2600,Dublin 2,"83 Merrion Square S, Dublin 2, D02 R299, Ireland",53.3393522,-6.251456999999999
+51,2,,,Apartment,1790,Dublin,"46 Middle Abbey St, North City, Dublin 1, D01 Y273, Ireland",53.34785660000001,-6.2630553
+52,2,2,,Terraced House,2555,Dublin 4,"4, Brookvale, Brookvale Rd, Rathmines, Dublin 4, Ireland",53.3178593,-6.234846399999999
+53,1,1,,Apartment,735,Dublin 4,"4 Northumberland Pl, Dublin, D04 F3F8, Ireland",53.3376128,-6.2381632
+54,3,3,125,Apartment,1295,Dublin,"2 Hanover St E, Dublin Docklands, Dublin 2, D02 E860, Ireland",53.344184,-6.241160799999999
+55,1,1,,Studio,515,Dublin 2,"70 Grafton Street, Dublin, Ireland",53.3411515,-6.2606356
+56,1,1,,Studio,475,Dublin 2,"70 Grafton Street, Dublin, Ireland",53.3411515,-6.2606356
+57,1,1,23,Studio,375,Dublin 2,"83 Merrion Square S, Dublin 2, D02 R299, Ireland",53.3393522,-6.251456999999999
+58,1,1,35,Studio,415,Dublin 2,"83 Merrion Square S, Dublin 2, D02 R299, Ireland",53.3393522,-6.251456999999999
+59,1,1,50,Apartment,525,Dublin 2,"83 Merrion Square S, Dublin 2, D02 R299, Ireland",53.3393522,-6.251456999999999
+60,1,1,,Studio,575,Dublin 2,"Leeson Street Lower & Hatch Street Lower, Saint Kevin's, Dublin, Ireland",53.3344065,-6.255243999999999
+61,3,2,,Apartment,895,Dublin 1,"1 Mayor Street Lower, Dublin Docklands, Dublin, Ireland",53.3496963,-6.2454128
+62,1,1,30,Studio,925,Dublin,"Garter Ln, Saggart, Co. Dublin, D24 PKF1, Ireland",53.28603409999999,-6.4500395
+63,1,,,Apartment,277,Dublin,"Cork St, The Liberties, Dublin, D08 P772, Ireland",53.3378874,-6.2833016
+64,1,1,13.7,Apartment,256,Dublin,"Bonham St, Saint Catherine's, Dublin 8, D08 R596, Ireland",53.3449253,-6.2832029
+65,1,1,13.7,Apartment,267,Dublin,"Bonham St, Saint Catherine's, Dublin 8, D08 R596, Ireland",53.3449253,-6.2832029
+66,1,1,14.9,Apartment,277,Dublin,"Bonham St, Saint Catherine's, Dublin 8, D08 R596, Ireland",53.3449253,-6.2832029
+67,1,1,,Apartment,287,Dublin,"Bonham St, Saint Catherine's, Dublin 8, D08 R596, Ireland",53.3449253,-6.2832029
+68,3,1,,Semi-Detached,2500,Dublin 14,"12 Roebuck Castle, Roebuck, Dublin 14, D14 EY18, Ireland",53.3021299,-6.2259164
+69,3,3,1590ft 2,Detached,3750,Dublin,"Vernon Mews, Clontarf, Dublin, Ireland",53.36098459999999,-6.1963832
+70,5,2,,Apartment,3000,County Dublin,"The Grange, Co. Dublin, Ireland",53.5152929,-6.2783433
+71,2,2,898ft 2,Apartment,2750,Dublin 2,"83 Merrion Square S, Dublin 2, D02 R299, Ireland",53.3393522,-6.251456999999999
+72,3,2,1100ft 2,Apartment,3500,Dublin 2,"2 Charlemont Ln, Clontarf, Dublin, Ireland",53.3644415,-6.225
+73,3,3,,,6500,Dublin,"Park Ave, Dublin, Ireland",53.3252007,-6.2129281
+74,2,2,,Apartment,1907,Dublin 14,"Apartment 125, The Elm, Charleville Square, Rathfarnham, Dublin 14, D14 HT04, Ireland",53.2950945,-6.2943582
+75,2,2,,Apartment,2100,County Dublin,"S Wall, Poolbeg, Dublin, Ireland",53.3421053,-6.151324499999999
+76,,1,,Studio,1021,Dublin 3,"Flat 2, 106 Philipsburgh Ave, Clontarf West, Dublin, D03 CD96, Ireland",53.3673253,-6.2397388
+77,2,1,,Apartment,1875,Dublin 10,"10 Le Fanu Rd, Drumfinn, Dublin, Ireland",53.3449858,-6.354513
+78,4,3,,House,5500,Dublin,"10 Mountpleasant Square, Ranelagh, Dublin 6, D06 VC03, Ireland",53.3280062,-6.2599478
+79,5,5,,House,7100,Dublin,"37 Woodlands Park, Stillorgan, Dublin, A94 KX81, Ireland",53.2963433,-6.199554
+80,5,5,,House,7100,County Dublin,"43A Woodlands Park, Stillorgan, Dublin, A94 FW25, Ireland",53.2966188,-6.1974309
+81,1,2,,Apartment,1500,Dublin 16,"84 Dargle Wood, Ballyroan, Dublin 16, D16 WY95, Ireland",53.2819115,-6.312943
+82,2,2,,Apartment,2325,Dublin 6W,"Harold's Cross Rd, Rathmines, Dublin, Ireland",53.3258208,-6.276913599999999
+83,2,,,Apartment,2450,Co. Dublin,"Malahide, Co. Dublin, Ireland",53.4509236,-6.1501378
+84,1,1,,Apartment,1800,Dublin 4,"Pembroke Court, Pembroke Rd, Ballsbridge, Dublin 4, Ireland",53.3316344,-6.236053999999999
+85,3,1,80,Semi-Detached,2550,Dublin 16,"16 Llewellyn Park, Rathfarnham, Dublin, D16 R224, Ireland",53.2815017,-6.264063699999999
+86,2,1,,Terraced House,1800,Dublin,"Little Strand St, Townparks, Skerries, Co. Dublin, Ireland",53.5793969,-6.1076139
+87,2,1,,Apartment,1785,Dublin,"Beverton Ct, Ballalease West, Donabate, Co. Dublin, Ireland",53.488816,-6.158670799999999
+88,2,2,,Apartment,1950,Dublin 13,"13 Myrtle Rd, Stapolin, Dublin, D13 CX36, Ireland",53.3984446,-6.148654899999999
+89,3,2,,Semi-Detached,2250,Dublin,"Forest Rd, Swords, Co. Dublin, Ireland",53.4471004,-6.2377857
+90,3,3,,Terraced House,2200,Dublin 5,"5 Cromcastle Dr, Kilmore, Dublin 5, D05 HT65, Ireland",53.3926264,-6.218364299999999
+91,3,3,,Terraced House,3500,County Dublin,"2 Thormanby Woods, Thormanby Road, Howth, Dublin, D13 P938, Ireland",53.3764358,-6.058166
+92,3,2,,Semi-Detached,2050,Dublin 24,"24 Parkhill Way, Kilnamanagh, Dublin 24, D24 Y9EF, Ireland",53.3007601,-6.364539499999999
+93,2,2,,Apartment,1900,Dublin 24,"Belgard Square W, Whitestown, Dublin, Ireland",53.2860053,-6.376029399999999
+94,2,2,,Apartment,1875,Dublin 22,"Thornfield Square, Watery Ln, Clondalkin, Dublin 22, Ireland",53.32437400000001,-6.393126
+95,1,1,,Studio,1100,Dublin,"Glenaraneen, Hillsbrook, Co. Dublin, Ireland",53.2432019,-6.4608495
+96,1,1,,Studio,1100,Dublin,"Glenaraneen, Hillsbrook, Co. Dublin, Ireland",53.2432019,-6.4608495
+97,1,1,,Apartment,1975,Dublin 18,"4, 18 Larkfield View, Ballyogan, Dublin, Co. Dublin, D18 W029, Ireland",53.25729279999999,-6.200917899999999
+98,3,2,,Apartment,3000,Co. Dublin,"De Vesci House, Carrickbrennan Rd, Monkstown, Co. Dublin, Ireland",53.2895663,-6.1508334
+99,2,2,,Apartment,2295,Dublin 18,"Ballyogan Rd, Leopardstown, Dublin, Co. Dublin, Ireland",53.2581351,-6.199379
+100,3,2,,Apartment,2200,Dublin 22,"Millpark, Clondalkin, Dublin, Co. Dublin, Ireland",53.3234837,-6.4002681
+101,1,1,,Apartment,1100,Dublin 22,"22 Woodford Ct, Redcow, Dublin 22, D22 E510, Ireland",53.3213425,-6.376893700000001
+102,3,3,,Apartment,2300,Dublin,"34 Larkfield Square, Ballyowen, Lucan, Co. Dublin, Ireland",53.3530082,-6.417719099999999
+103,2,2,80,Apartment,2000,Dublin,"Apartment 48, Kingston Hall, Harold's Grange Rd, Sandyford, Dublin 18, Ireland",53.2676542,-6.2537557
+104,2,3,132.4,Apartment,3500,County Dublin,"Howth Lodge, Howth Rd, Howth, Dublin, Ireland",53.3912462,-6.0844976
+105,2,2,,Apartment,2700,County Dublin,"41 Stillorgan Rd, Woodland, Dublin, Ireland",53.2943554,-6.2032831
+106,2,1,,Apartment,2100,Dublin 15,"15 Park Dr Ave, Castleknock, Dublin, Ireland",53.3747701,-6.366804800000001
+107,2,1,,Apartment,1700,Dublin,"Cherry Orchard, Dublin, Ireland",53.33705,-6.368396700000001
+108,4,2,,Semi-Detached,9500,Dublin 4,"4 Merrion Rd, Ballsbridge, Dublin 4, D04 NX33, Ireland",53.3263249,-6.2244133
+109,1,1,,Apartment,1300,Dublin 15,"Carpenterstown Road, Clonsilla, Dublin, Co. Fingal, Ireland",53.376417,-6.390781
+110,2,2,,Apartment,2100,Dublin 16,"16 Wyckham Way, Dundrum, Sandyford, Dublin, Ireland",53.2824995,-6.2434444
+111,4,4,,Apartment,259,Dublin,"8 Carman's Hall, The Liberties, Dublin, Ireland",53.3410237,-6.2751667
+112,5,2,,Detached,4000,Dublin 6W,"6w, 54 Rathdown Ave, Terenure, Dublin 6W, Co. Dublin, D6W KR81, Ireland",53.3041186,-6.288589699999999
+113,2,2,,Apartment,2000,Dublin 18,"Apartment 7, Joyce Hall, Carrickmines Ave, Carrickmines Wood, Dublin 18, Ireland",53.2578622,-6.165331699999999
+114,1,1,,Apartment,1600,Dublin 18,"Apartment 4, Marlfield House, Johnstown Rd, St Gabriels, Johnstown, Cabinteely, Co. Dublin, Ireland",53.2645036,-6.1504318
+115,2,2,,Apartment,1800,Dublin 12,"Cherry Orchard, Dublin, Ireland",53.332925,-6.379391099999999
+116,5,4,223,Terraced House,6500,Dublin,"St Paul’s Square, Adelaide Rd, Glenageary, Dublin, Ireland",53.2834167,-6.1250671
+117,4,3,190,Semi-Detached,7000,Dublin,"Finistere, Ballygihen Ave, Sandycove, Dublin, Ireland",53.28666219999999,-6.1177242
+118,2,,,,1910,County Dublin,"2 Old Dunleary Rd, Dún Laoghaire, Monkstown, Co. Dublin, A96 TX4N, Ireland",53.2955388,-6.1477011
+119,,,,,3240,Dublin 2,"82 Sir John Rogerson's Quay, Grand Canal Dock, Dublin, Ireland",53.3448058,-6.2315043
+120,2,3,,Penthouse,15000,Dublin,"82 Sir John Rogerson's Quay, Grand Canal Dock, Dublin, Ireland",53.3448058,-6.2315043
+121,2,2,,Apartment,3240,D02P524,"82 Sir John Rogerson's Quay, Grand Canal Dock, Dublin, Ireland",53.3448058,-6.2315043
+122,3,2,,Apartment,4230,D02P524,"82 Sir John Rogerson's Quay, Grand Canal Dock, Dublin, Ireland",53.3448058,-6.2315043
+123,2,2,,Apartment,4300,Dublin,"82 Sir John Rogerson's Quay, Grand Canal Dock, Dublin, Ireland",53.3448058,-6.2315043
+124,2,2,,Apartment,4500,Dublin,"82 Sir John Rogerson's Quay, Grand Canal Dock, Dublin, Ireland",53.3448058,-6.2315043
+125,2,1,71,Apartment,1755,Dublin,"Apartment 19, Grattan Hall, Mount Street Lower, Dublin 2, Ireland",53.3388319,-6.2424066
+126,2,2,83,Apartment,2259,County Dublin,"37 Woodview, Blackrock, Dublin, Ireland",53.300418,-6.1886511
+127,3,1,,Apartment,2145,County Dublin,"Cedarmount Apartment, St Brigid's Church Rd, Stillorgan, Dublin, Ireland",53.28417080000001,-6.1964082
+128,2,1,,Apartment,1700,Dublin 24,"24 Carrig Ct, Fortunestown, Dublin, Ireland",53.2844719,-6.4315102
+129,3,2,,Apartment,2000,Dublin 22,"Grange View Rd, Dublin, Co. Dublin, Ireland",53.3283378,-6.4306392
+130,2,1,,Apartment,1950,Dublin 10,"10 Cedar Brook Walk, Cherry Orchard, Dublin, D10 D445, Ireland",53.33607120000001,-6.3797178
+131,2,2,87,Apartment,2400,Dublin 14,"Heidelberg, Ardilea, Dublin 14, Ireland",53.2962354,-6.2258616
+132,4,1,,House,3800,Dublin 6,"3 Old Mountpleasant, Ranelagh, Dublin 6, D06 C432, Ireland",53.32658660000001,-6.2582011
+133,2,1,,Apartment,2150,Harold's Cross,"Harold's Cross Rd, Rathmines, Dublin, Ireland",53.3258208,-6.276913599999999
+134,1,1,,Apartment,1100,Dublin 22,"22 Monastery Park, Clondalkin, Dublin 22, D22 H294, Ireland",53.321789,-6.388111599999999
+135,3,3,,House,2500,County Dublin,"Castleland Park way, Castleland, Balbriggan, Co. Dublin, Ireland",53.5993043,-6.1796001
+136,2,2,,Apartment,2000,Dublin 9,"Block A, Northwood House, Northwood Park, Lymewood Mews, Dublin 9, Ireland",53.4027696,-6.2580491
+137,2,1,,Apartment,1850,Dublin,"The Courthouse, Main St, Rathcoole, Co. Dublin, Ireland",53.2802134,-6.4702268
+138,1,1,,Apartment,850,Dublin,"Fortunestown Cl, Jobstown, Dublin, Ireland",53.28663900000001,-6.414477199999999
+139,2,3,,,4000,Dublin 6,"112 Orwell Rd, Rathfarnham, Dublin, D06 TN66, Ireland",53.3062555,-6.2688272
+140,2,1,,Apartment,2200,Dublin 20,"Knockmaree, St Laurence's Rd, Chapelizod, Dublin 20, Ireland",53.346636,-6.346216699999999
+141,5,2,,,4750,Ballsbridge,"35 Herbert Ave, Dublin, Ireland",53.3159069,-6.2095817
+142,3,,,,2600,Co. Dublin,"The Paddocks Dr, Doddsborough, Lucan, Co. Dublin, Ireland",53.3479244,-6.4614717
+143,1,1,,Apartment,1800,Dublin 7,"2-4 Carnlough Rd, Cabra West, Dublin, Ireland",53.3621833,-6.2934022
+144,3,2,,Apartment,2600,Dublin 7,"2-4 Carnlough Rd, Cabra West, Dublin, Ireland",53.3621833,-6.2934022
+145,4,2,,Detached,3500,Dublin,"St Fintan's Park, Sutton North, Dublin, Ireland",53.3770974,-6.0966181
+146,2,,,Apartment,4000,Dublin 2,"Opus Building National College of Ireland, 6 Hanover Quay, Grand Canal Dock, Dublin, D02 RR24, Ireland",53.3441816,-6.235045
+147,2,,,Apartment,3572,Dublin 2,"Opus Building National College of Ireland, 6 Hanover Quay, Grand Canal Dock, Dublin, D02 RR24, Ireland",53.3441816,-6.235045
+148,2,,,Apartment,3150,Dublin 2,"Opus Building National College of Ireland, 6 Hanover Quay, Grand Canal Dock, Dublin, D02 RR24, Ireland",53.3441816,-6.235045
+149,3,,,Penthouse,6000,Dublin 2,"Opus Building National College of Ireland, 6 Hanover Quay, Grand Canal Dock, Dublin, D02 RR24, Ireland",53.3441816,-6.235045
+150,3,,,Apartment,4200,Dublin 2,"Opus Building National College of Ireland, 6 Hanover Quay, Grand Canal Dock, Dublin, D02 RR24, Ireland",53.3441816,-6.235045
+151,2,1,,Bungalow,1750,Dublin 20,"1 Mill Ln, Redcowfarm, Dublin 20, D20 DK44, Ireland",53.3577378,-6.3613577
+152,1,2,,,2000,Dublin,"4 Pembroke Cottages, Dublin 4, D04 F5C0, Ireland",53.32263,-6.2364251
+153,1,2,,Apartment,2040,Dublin 1,"35 Henry St, North City, Dublin, D01 WC52, Ireland",53.3497247,-6.2612008
+154,1,1,,Apartment,1500,County Dublin,"Slade Castle Ave, Moneyatta Commons, Co. Dublin, Ireland",53.27866,-6.44576
+155,,,,Apartment,2400,County Dublin,"Glenageary Rd Upper, Honeypark, Dún Laoghaire, Co. Dublin, Ireland",53.2827277,-6.1426919
+156,,,,Apartment,1925,County Dublin,"Occu Fairway Fairway Court, Fairway Dr, Dún Laoghaire, Cualanor, Co. Dublin, A96 W24D, Ireland",53.2842243,-6.1406208
+157,,,,House,2485,Dublin,"Lucan, St. Edmondsbury, Lucan, Co. Dublin, Ireland",53.36297949999999,-6.438043299999999
+158,2,,,Apartment,2200,Dublin 7,"2-4 Carnlough Rd, Cabra West, Dublin, Ireland",53.3621833,-6.2934022
+159,3,,,,2950,Dublin 3,"3 Kincora Ave, Clontarf, Dublin 3, D03 R127, Ireland",53.3633495,-6.2093859
+160,3,1,,Bungalow,2105,Dublin 24,"Bohernabreena Rd, Co. Dublin, Ireland",53.2682362,-6.358444
+161,1,1,,Apartment,1375,Dublin 8,"City Gate, St Augustine St, Usher's Quay, Dublin 8, Ireland",53.3448168,-6.2770487
+162,2,2,,Apartment,2200,Dublin 7,"2-4 Carnlough Rd, Cabra West, Dublin, Ireland",53.3621833,-6.2934022
+163,,,,House,3250,Dublin,"Kilbarrack Rd, Donaghmede, Dublin, Ireland",53.38303209999999,-6.1486491
+164,,,,Apartment,1900,County Dublin,"Cheevers Court, Cualanor Cres, Monkstown, Dún Laoghaire, Co. Dublin, Ireland",53.2851715,-6.1405162
+165,3,3,108.7,Apartment,2850,Co. Dublin,"Cheevers Court, Cualanor Cres, Monkstown, Dún Laoghaire, Co. Dublin, Ireland",53.2851715,-6.1405162
+166,2,2,86,Apartment,2200,Co. Dublin,"Cheevers Court, Cualanor Cres, Monkstown, Dún Laoghaire, Co. Dublin, Ireland",53.2851715,-6.1405162
+167,1,1,,Apartment,1900,Co. Dublin,"Cheevers Court, Cualanor Cres, Monkstown, Dún Laoghaire, Co. Dublin, Ireland",53.2851715,-6.1405162
+168,1,1,53,,1650,Dublin 4,"Apartment 4, 70/72 Pembroke Rd, Dublin, D04 Y927, Ireland",53.3326321,-6.2389074
+169,3,2,,Apartment,2900,County Dublin,"The Grange, Brewery Rd, Stillorgan, Dublin, A94 C2F6, Ireland",53.2803812,-6.1928395
+170,4,2,,Detached,2010,Dublin,"Hillview, Rathcoole, Co. Dublin, Ireland",53.281541,-6.4738919
+171,2,2,,Apartment,1700,Dublin 22,"Rath Gael Estate, stop 2165, Deansrath, Dublin, Co. Dublin, Ireland",53.3202192,-6.424231799999999
+172,,,,,1700,Dublin 8,"S Circular Rd, Island Bridge, Saint James' (part of Phoenix Park), Dublin 8, D08 PE89, Ireland",53.34575570000001,-6.306395
+173,2,2,,Apartment,2100,Dublin 18,"Vantage Apartments, Central Park, Carmanhall and Leopardstown, Dublin, Co. Dublin, 18, Ireland",53.2698325,-6.204669300000001
+174,3,2,,Apartment,3800,Dublin 18,"Vantage Apartments, Central Park, Carmanhall and Leopardstown, Dublin, Co. Dublin, 18, Ireland",53.2698325,-6.204669300000001
+175,1,,,Apartment,2150,Dublin 6,"Sandford Lodge, Sandford Rd, Ranelagh, Dublin 6, D06 A9P8, Ireland",53.322111,-6.247910999999999
+176,,,,Apartment,2500,Dublin 1,"Quayside Quarter, Dublin Landings, 76 N Wall Quay, North Dock, Dublin 1, Ireland",53.3471988,-6.2326983
+177,,,,Apartment,1900,Dublin 9,"stop 1493, Turlogh Parade, Grace Park, Dublin, Ireland",53.3717523,-6.234340800000001
+178,2,,,Apartment,3150,Dublin 2,"Opus Building National College of Ireland, 6 Hanover Quay, Grand Canal Dock, Dublin, D02 RR24, Ireland",53.3441816,-6.235045
+179,2,2,,Apartment,1700,Dublin,"Hansted Rd, Adamstown, Lucan, Co. Dublin, Ireland",53.33654920000001,-6.4524745
+180,2,1,,Apartment,1650,Dublin,"Esker Pines, Lucan, Co. Dublin, Ireland",53.3554762,-6.4316894
+181,3,3,,Apartment,2850,Dublin 8,"Mellowe's Quay, Usher's Quay, Dublin 8, Ireland",53.3454402,-6.279810899999999
+182,,,,Apartment,1950,County Dublin,"Station Rd, Portmarnock, Co. Dublin, Ireland",53.4185913,-6.1489407
+183,,,,Apartment,2480,Dublin 6W,"Harold's Cross, Dublin 6W, Co. Dublin, Ireland",53.32156879999999,-6.2853024
+184,,,,Apartment,1850,Dublin 18,"Ballyogan Rd, Carmanhall and Leopardstown, Dublin 18, D18 R583, Ireland",53.2601783,-6.2070873
+185,2,2,,Apartment,2395,Dublin 18,"Abbey Glen, Johnstown, Dublin 18, D18 EE92, Ireland",53.2650338,-6.1486624
+186,,,,Apartment,2258,Dublin 1,"Castleforbes Rd & Castleforbes Square, Dublin Docklands, Dublin, Ireland",53.34929959999999,-6.2318942
+187,,,,Apartment,1773,Dublin,"12-52 Wolfe Tone St, North City, Dublin, D01 VW53, Ireland",53.34914879999999,-6.2676767
+188,2,,,Apartment,2500,Co. Dublin,"Malahide, Co. Dublin, Ireland",53.4521475,-6.159519899999999
+189,3,1,,Semi-Detached,2000,Dublin 22,"22 Woodford Way, Knockmitten, Dublin 22, D22 NY33, Ireland",53.3255558,-6.379327
+190,2,1,,Apartment,1500,Dublin 12,"Apartment 1, Goldstone Court, Clogher Rd, Crumlin, Dublin 12, Ireland",53.32664459999999,-6.291081699999999
+191,1,,,Apartment,1600,Dublin,"Apartment 38, Block A, Blackhall Square, King St N, Dublin 7, Ireland",53.3500179,-6.2803524
+192,4,3,,Apartment,3000,Co. Dublin,"Castlegate Grove, Finnstown, Lucan, Co. Dublin, Ireland",53.3389773,-6.4584733
+193,2,,,Apartment,1854,Dublin,"Apartment 16, Saint Patricks Court, Clanbrassil Street Lower, Dublin 8, Ireland",53.33388350000001,-6.2757933
+194,2,2,75,Apartment,2100,Leopardstown,"Ballyogan Rd, Carmanhall and Leopardstown, Dublin 18, D18 R583, Ireland",53.2601783,-6.2070873
+195,1,1,55,Apartment,1874,Leopardstown,"Ballyogan Rd, Carmanhall and Leopardstown, Dublin 18, D18 R583, Ireland",53.2601783,-6.2070873
+196,2,2,88,Apartment,2050,Co. Dublin,"Station Rd, Portmarnock, Co. Dublin, Ireland",53.4185913,-6.1489407
+197,2,2,,Apartment,2350,Harold's Cross,"Harold's Cross Rd, Rathmines, Dublin, Ireland",53.3258208,-6.276913599999999
+198,1,1,,Apartment,2050,Harold's Cross,"Harold's Cross Rd, Rathmines, Dublin, Ireland",53.3258208,-6.276913599999999
+199,,,,Apartment,1684,Dublin,"Shackletons Mills, Woodlands, Lucan, Co. Dublin, Ireland",53.3685209,-6.4338628
+200,2,,,Apartment,2100,Dublin,"S Circular Rd, Island Bridge, Saint James' (part of Phoenix Park), Dublin 8, D08 PE89, Ireland",53.34575570000001,-6.306395
+201,3,2,,Apartment,3800,Dublin,"Vantage Apartments, Central Park, Carmanhall and Leopardstown, Dublin, Co. Dublin, 18, Ireland",53.2698325,-6.204669300000001
+202,1,1,,Apartment,1850,Dublin,"S Circular Rd, Island Bridge, Saint James' (part of Phoenix Park), Dublin 8, D08 PE89, Ireland",53.34575570000001,-6.306395
+203,4,4,,House,3500,Dublin,"S Circular Rd, Island Bridge, Saint James' (part of Phoenix Park), Dublin 8, D08 PE89, Ireland",53.34575570000001,-6.306395
+204,2,2,,Apartment,2150,Dublin,"S Circular Rd, Island Bridge, Saint James' (part of Phoenix Park), Dublin 8, D08 PE89, Ireland",53.34575570000001,-6.306395
+205,2,2,,Apartment,2700,Dublin,"Sandford Lodge, Sandford Rd, Ranelagh, Dublin 6, D06 A9P8, Ireland",53.322111,-6.247910999999999
+206,3,2,,Apartment,2900,Dublin,"The Grange, Brewery Rd, Stillorgan, Dublin, A94 C2F6, Ireland",53.2803812,-6.1928395
+207,1,1,54,Apartment,2500,Dublin 1,"Quayside Quarter, Dublin Landings, 76 N Wall Quay, North Dock, Dublin 1, Ireland",53.3471988,-6.2326983
+208,2,2,87,Apartment,3245,Dublin 1,"Quayside Quarter, Dublin Landings, 76 N Wall Quay, North Dock, Dublin 1, Ireland",53.3471988,-6.2326983
+209,3,2,101,Apartment,3900,Dublin 1,"Quayside Quarter, Dublin Landings, 76 N Wall Quay, North Dock, Dublin 1, Ireland",53.3471988,-6.2326983
+210,1,1,,Apartment,1900,Dublin 9,"stop 1493, Turlogh Parade, Grace Park, Dublin, Ireland",53.3717523,-6.234340800000001
+211,2,2,,Apartment,2250,Dublin 9,"stop 1493, Turlogh Parade, Grace Park, Dublin, Ireland",53.3717523,-6.234340800000001
+212,3,2,,Apartment,3045,Dublin 9,"stop 1493, Turlogh Parade, Grace Park, Dublin, Ireland",53.3717523,-6.234340800000001
+213,1,1,,Apartment,1500,Dublin 11,"Apartment 12, Saint Mobhi Court, St Mobhi Boithirin, Botanic, Dublin 9, D09 HE28, Ireland",53.3771624,-6.266604999999999
+214,2,1,,Apartment,2400,Dublin 6,"71 Ranelagh Rd, Ranelagh, Dublin, D06 X750, Ireland",53.3286026,-6.2582518
+215,2,2,,Apartment,1950,Co. Dublin,"The Four Ferns, Brighton Rd, Foxrock, Dublin, Ireland",53.2585577,-6.1716751
+216,1,1,,Apartment,1500,Dublin,"Beverton Ct, Ballalease West, Donabate, Co. Dublin, Ireland",53.488816,-6.158670799999999
+217,2,1,,Terraced House,2000,Dublin 10,"10 Thomond Rd, Decies, Dublin 10, D10 HN40, Ireland",53.3412506,-6.343826900000001
+218,5,3,,,6950,Co. Dublin,"2 Seafield Cres, Trimblestown, Blackrock, Co. Dublin, A94 NK69, Ireland",53.3067149,-6.2091544
+219,2,2,,Apartment,2850,Dublin 6,"Fitzwilliam Court, 1 Winton Rd, Ranelagh, Dublin 6, D06 CK79, Ireland",53.328829,-6.2507997
+220,3,3,,House,4350,Dublin 4,"The Mews, 40 Elgin Rd, Ballsbridge, Dublin 4, D04 W3X2, Ireland",53.330414,-6.2342758
+221,3,3,,,4350,Dublin 4,"6 Leeson Village, Ranelagh, Dublin, D04 X7W5, Ireland",53.3276309,-6.246871899999999
+222,3,2,,,2475,Co. Dublin,"Portmarnock, Co. Dublin, Ireland",53.4173388,-6.1468959
+223,2,2,,Apartment,1875,Dublin,"25 Melville Cove, Jamestown Little, Dublin, Ireland",53.4025877,-6.2995416
+224,2,2,,Apartment,2500,Dublin,"Booterstown Ave, Merrion, Blackrock, Co. Dublin, Ireland",53.3004639,-6.2046876
+225,2,2,,Apartment,1860,Dublin 18,"Blackthorn Rd, Sandyford, Dublin, Ireland",53.2775421,-6.2166744
+226,2,1,60,Apartment,2200.00,Dublin 4,"Brooklands, Nutley Ln, Dublin 4, Ireland",53.3184299,-6.2150244
+227,1,1,,Apartment,1950,Co. Dublin,"Glenageary Rd Upper & Feldberg Rd, Dalkey, Dublin, Ireland",53.2761675,-6.1235149
+228,1,1,,House,1968,Dublin 4,"4 Celestine Ave, Dublin, Ireland",53.33944049999999,-6.2263245
+229,2,2,,Apartment,1900,Dublin 24,"24 Greenhills Rd, Kilnamanagh, Dublin, Ireland",53.3032789,-6.351092899999999
+230,2,1,,Terraced House,1800,Dublin 10,"10 Ballyneety Rd, Kilmainham, Dublin 10, D10 YK23, Ireland",53.34099699999999,-6.3324609
+231,2,2,,Apartment,2000,Dublin 18,"The Village Centre, Rockview, Blackglen Rd, Sandyford, Dublin 18, D18 K4N2, Ireland",53.2686123,-6.2430213
+232,2,2,87.5,Apartment,2278,Co. Dublin,"Occu Fairway Fairway Court, Fairway Dr, Dún Laoghaire, Cualanor, Co. Dublin, A96 W24D, Ireland",53.2842243,-6.1406208
+233,2,1,,Terraced House,2000,Dublin 12,"12 Clonard Road, Crumlin, Dublin 12, D12 Y622, Ireland",53.3275858,-6.3061512
+234,2,2,,Apartment,2759,Ballsbridge,"Shrewsbury Square, Sandymount Ave, Ballsbridge, Dublin 4, Ireland",53.3270333,-6.2210526
+235,2,1,,House,1900,Dublin 24,"Saint Martin, 24 Allenton Dr, Ballycragh, Dublin 24, D24 YP6F, Ireland",53.2718386,-6.352596
+236,1,,13,Apartment,267,Dublin,"Cork St, The Liberties, Dublin, D08 P772, Ireland",53.3378874,-6.2833016
+237,1,,,Apartment,262,Dublin,"Cork St, The Liberties, Dublin, D08 P772, Ireland",53.3378874,-6.2833016
+238,3,1,,House,1600,Dublin 20,"20 Palmerstown Woods, Raheen, Dublin 22, D22 X654, Ireland",53.336206,-6.395602999999999
+239,1,1,,Studio,600,Dublin,"Fortunestown Ln., Dublin, Ireland",53.284225,-6.423664899999999
+240,4,3,203.8,Detached,3750,Dublin,"Iona, Knocknashee, Mountanville, Dublin 14, Ireland",53.2912009,-6.228887599999999
+241,2,2,8.5,Apartment,2171,Co. Dublin,"Honeypark, Dublin, Ireland",53.2796783,-6.1442735
+242,2,1,,Apartment,1800,Dublin 12,"12 Clonard Road, Crumlin, Dublin 12, D12 Y622, Ireland",53.3275858,-6.3061512
+243,4,4,,Terraced House,4250,Dublin 6,"139 Harold's Cross Rd, Harold's Cross, Dublin 6W, Co. Dublin, D6W R206, Ireland",53.32447639999999,-6.2782621
+244,2,,,Apartment,2000,Dublin 18,"Kilgobbin, Stepaside, Co. Dublin, Ireland",53.2530164,-6.214333099999999
+245,1,1,,Apartment,1500,Dublin 22,"Unnamed Road, Yellowmeadows, Dublin, Co. Dublin, Ireland",53.3271536,-6.3832399
+246,3,1,,Terraced House,2100,Dublin 22,"22 Yellow Meadows Dr, Yellowmeadows, Dublin 22, D22 VK76, Ireland",53.3270129,-6.379671399999999
+247,2,2,,Apartment,2172,Co. Dublin,"Honey Park, Honeypark, Sallynoggin, Co. Dublin, Ireland",53.2794974,-6.145749599999999
+248,2,1,,,1450,County Dublin,"Broghan, The Ward, Co. Dublin, Ireland",53.43335,-6.32749
+249,2,2,,,1950,Dublin 15,"Castleknock, Co. Dublin, Ireland",53.3736519,-6.3584191
+250,2,1,,Apartment,1500,Dublin 24,"Deerpark Pl, Kiltipper, Dublin, Ireland",53.2691074,-6.373424699999999
+251,2,2,,Apartment,2000,Dublin 15,"Block 5, 15 Annaly Grove, Dublin, Ireland",53.3916248,-6.4328601
+252,2,1,,Terraced House,1550,Dublin 24,"24 Tymonville Dr, Tymon North, Dublin 24, D24 E8Y6, Ireland",53.3007842,-6.3514648
+253,1,1,799ft 2,Apartment,1920,Dublin,"115/116 Coliemore Rd, Dalkey, Dublin, A96 HE22, Ireland",53.27707789999999,-6.103046700000001
+254,2,2,,Apartment,1750,Dublin 22,"Grange View Rd, Dublin, Co. Dublin, Ireland",53.3283378,-6.4306392
+255,2,1,,Apartment,1600,Dublin 10,"Cedar Brook Way, Cherry Orchard, Dublin, Ireland",53.3370425,-6.3788801
+256,3,3,,Semi-Detached,2200,Dublin,"Crosforge, Co. Dublin, Ireland",53.2801565,-6.4474021
+257,3,2,,Apartment,2163,Co. Dublin,"Shackletons Mills, Woodlands, Lucan, Co. Dublin, Ireland",53.3685209,-6.4338628
+258,2,2,,Apartment,1875,Dublin 24,"24 Deerpark Rd, Kiltipper, Dublin 24, D24 KW35, Ireland",53.2709786,-6.3754558
+259,4,4,,Detached,4950,Dublin 16,"Dunkeld, Scholarstown Rd, Ballyboden, Dublin 16, Ireland",53.28026389999999,-6.3005731
+260,3,2,,Terraced House,1850,Dublin 22,"22 Castlegrange Square, Deansrath, Dublin 22, D22 TD43, Ireland",53.321154,-6.4234113
+261,2,2,,Apartment,1635,Dublin,"Apartment 21, Eaton Terrace, Eaton Dr, Rathcoole, Co. Dublin, Ireland",53.28194,-6.4710705
+262,2,2,,Apartment,1550,Dublin 22,"Unnamed Road, Yellowmeadows, Dublin, Co. Dublin, Ireland",53.3271536,-6.3832399
+263,3,1,,Terraced House,1800,Dublin 22,"22 Monksfield Meadows, Knockmitten, Dublin 22, D22 EE73, Ireland",53.3231232,-6.3766906
+264,4,2,,Terraced House,3750,Dublin 8,"258 S Circular Rd, Saint Catherine's, Dublin, D08 NCW4, Ireland",53.3318396,-6.2843183
+265,5,5,,,15000,Dublin 4,"17 Raglan Rd, Ballsbridge, Dublin, D04 C3C2, Ireland",53.33065149999999,-6.238630199999999
+266,2,2,,Apartment,1875,Dublin 22,"Weaver Court, Neilstown Rd, Neillstown, Dublin 22, Ireland",53.3458031,-6.3991984
+267,2,2,,Terraced House,1800,Dublin 22,"22 Riverside, Clondalkin, Dublin 22, D22 X744, Ireland",53.32493840000001,-6.3920143
+268,2,3,93,Apartment,2155,Co. Dublin,"Honeypark, Dún Laoghaire, Co. Dublin, Ireland",53.2801069,-6.1436563
+269,1,,,Apartment,262,Dublin,"Cork St, The Liberties, Dublin, D08 P772, Ireland",53.3378874,-6.2833016
+270,3,2,,Apartment,2400,Co. Dublin,"Glenageary Rd Upper, Honeypark, Dún Laoghaire, Co. Dublin, Ireland",53.2827277,-6.1426919
+271,1,1,,Apartment,251,Dublin,"123 Summerhill, Mountjoy, Dublin, D01 TY46, Ireland",53.3548925,-6.2557085
+272,1,1,,Apartment,256,Dublin,"Bonham St, Saint Catherine's, Dublin 8, D08 R596, Ireland",53.3449253,-6.2832029
+273,1,1,,Apartment,POA,Dublin 1,"107 Dorset Street Upper, Dublin, D01 F6F8, Ireland",53.3550207,-6.266350399999999
+274,2,1,,Apartment,1950,Dublin 8,"Conyngham Rd, Phoenix Park, Dublin, Ireland",53.3479385,-6.3034072
+275,3,4,,Terraced House,2245,Dublin 14,"Woodside & Dodder Park Road, Newtown Little, Dublin, Ireland",53.303405,-6.2711603
+276,5,7,,Semi-Detached,15000,Dublin 4,"3 Clyde Rd, Ballsbridge, Dublin, D04 C1W2, Ireland",53.3295574,-6.2350578
+277,2,2,,Apartment,2200,Dublin,"Linden Square, Grove Ave, Stillorgan, Dublin, Ireland",53.2931907,-6.1944534
+278,2,1,,Semi-Detached,2379,Dublin,"4 McCabe Villas, Booterstown, Blackrock, Co. Dublin, A94 WR67, Ireland",53.3048339,-6.2029917
+279,2,2,,Apartment,1850,Dublin 22,"Westbourne Dr, Deansrath, Dublin, Ireland",53.3240703,-6.4243964
+280,2,1,,Apartment,1900,County Dublin,"Millrace Ave, Saggart, Co. Dublin, Ireland",53.2808193,-6.450944499999999
+281,4,2,289,Terraced House,11000,Dublin 6,"6 Palmerston Rd, Rathmines, Dublin 6, Ireland",53.3206535,-6.259341399999999
+282,2,1,,Apartment,1635,Dublin 10,"10 Cedar Brook Ave, Cherry Orchard, Dublin 10, D10 NR18, Ireland",53.3373997,-6.382048999999999
+283,2,2,,Apartment,2049,Dublin 6W,"6 Bushy Park House, Terenure, Dublin, Ireland",53.3017945,-6.2965635
+284,2,1,,Apartment,2200,Dublin 6,"102 Rathgar Rd, Rathfarnham, Dublin 6, D06 YW96, Ireland",53.3123838,-6.274123400000001
+285,2,2,,Apartment,3200,Dublin 4,"4 Shrewsbury Park, Ballsbridge, Dublin, Ireland",53.3247303,-6.219170999999999
+286,3,2,,Apartment,3850,Dublin 4,"Dublin Southside, Dublin, Co. Dublin, Ireland",53.3268543,-6.2323521
+287,1,1,,Apartment,1990,Dublin 4,"Herbert Park Ln, Dublin, Ireland",53.3278224,-6.2318967
+288,2,1,,Apartment,2100,Dublin 4,"Apartment 11, Brendan House, Brendan Rd, Dublin 4, Ireland",53.3247659,-6.236910099999999
+289,1,1,,Apartment,1700,Dublin,"S Circular Rd, Island Bridge, Saint James' (part of Phoenix Park), Dublin 8, D08 PE89, Ireland",53.34575570000001,-6.306395
+290,1,1,,Apartment,2150,Dublin,"Sandford Lodge, Sandford Rd, Ranelagh, Dublin 6, D06 A9P8, Ireland",53.322111,-6.247910999999999
+291,2,2,,Apartment,2700,Dublin,"The Gasworks, Barrow St, Dublin 4, D04 R1H7, Ireland",53.3387519,-6.233438
+292,2,2,,Apartment,2700,Dublin,"The Gasworks, Barrow St, Dublin 4, D04 R1H7, Ireland",53.3387519,-6.233438
+293,2,2,,Apartment,2250,Dublin,"The Gasworks, Barrow St, Dublin 4, D04 R1H7, Ireland",53.3387519,-6.233438
+294,2,2,,Apartment,2450,Dublin,"The Gasworks, Barrow St, Dublin 4, D04 R1H7, Ireland",53.3387519,-6.233438
+295,2,2,,Apartment,1875,Dublin 22,"22 Monastery Road, Redcow, Dublin, Ireland",53.3188033,-6.371258099999999
+296,2,2,,Apartment,2600,Dublin 4,"Dublin Southside, Dublin, Co. Dublin, Ireland",53.3268543,-6.2323521
+297,5,3,,House,10000,Dublin 4,"4 Leeson Street Upper, Ranelagh, Dublin 4, D04 Y6T7, Ireland",53.3316953,-6.2526975
+298,2,2,,Apartment,1800,Dublin 22,"22 Monastery Road, Redcow, Dublin, Ireland",53.3188033,-6.371258099999999
+299,4,,,,2700,Dublin 3,"4 Seafield Downs, Clontarf, Dublin 3, D03 R3W9, Ireland",53.3617749,-6.1830637
+300,3,,,,2600,Dublin 5,"44 Furry Park Ct, Clontarf, Dublin 5, D05 E8C1, Ireland",53.3733702,-6.1981515
+301,1,1,45,Terraced House,1900,Dublin 7,"2 Church Terrace, Smithfield, Dublin, D07 Y4X7, Ireland",53.3492861,-6.2742141
+302,3,3,,Apartment,4700,Dublin 4,"Dublin, Ireland",53.3333506,-6.2285413
+303,4,3,,Semi-Detached,2956,Dublin 16,"12 Castlebrook, Dundrum, Dublin 16, D16 N8X8, Ireland",53.28549150000001,-6.2430156
+304,2,1,,Apartment,1900,Dublin,"591, 593 S Circular Rd, Saint James' (part of Phoenix Park), Dublin, D08 XA0W, Ireland",53.33966760000001,-6.305901599999999
+305,1,1,,Apartment,2000,Dublin 4,"Dublin Southside, Dublin, Co. Dublin, Ireland",53.3268543,-6.2323521
+306,5,4,,House,6300,Dublin,"Malahide Rd, Malahide, Co. Dublin, Ireland",53.43600259999999,-6.1770812
+307,2,2,,Apartment,1850,Co. Dublin,"6th Floor, Embassy House, Ballsbridge, Dublin 4, Ireland",53.3282146,-6.231760599999999
+308,1,1,,Apartment,1500,Dublin 3,"Kingston Lodge, Clonliffe Rd, Drumcondra, Dublin 3, Ireland",53.36349560000001,-6.2555061
+309,2,1,75,Apartment,1850,Dublin 8,"Bellevue, Island Bridge, Kilmainham, Dublin 8, Co. Dublin, Ireland",53.3468527,-6.3108311
+310,3,2,,Apartment,2259,Co. Dublin,"Apartment 36, Juliet Square, St Edmunds Park, Yellow Walls, Lucan, Co. Dublin, Ireland",53.35422399999999,-6.407882499999999
+311,2,2,95,Apartment,2212,Co. Dublin,"Occu Fairway Fairway Court, Fairway Dr, Dún Laoghaire, Cualanor, Co. Dublin, A96 W24D, Ireland",53.2842243,-6.1406208
+312,2,2,117,Apartment,1950,Co. Dublin,"Adamstown Avenue, stop 7120, Finnstown, Lucan, Co. Dublin, Ireland",53.3375569,-6.4635161
+313,3,2,135,Apartment,2275,Co. Dublin,"Adamstown Blvd, Adamstown, Co. Dublin, Ireland",53.3411394,-6.469161799999999
+314,1,,,Studio,900,Dublin,"Aylmer Rd, Co. Dublin, Ireland",53.3070347,-6.475081599999999
+315,2,2,,Apartment,1922,Co. Dublin,"Shackleton Vale, Tobermaclugg, Lucan, Co. Dublin, Ireland",53.3459224,-6.473003200000001
+316,2,1,,Apartment,1502,Dublin,"Rochford Park, Killhill, Co. Kildare, Ireland",53.2486773,-6.5852534
+317,3,3,,Apartment,2690,Dublin 4,"72 S Lotts Rd, Dublin 4, D04 K201, Ireland",53.3403995,-6.2323071
+318,2,2,,Apartment,2400,D06R892,"Apartment 74, Milltown Hall, Milltown Ave, Mount St Annes, Dublin 6, Ireland",53.3138087,-6.2500035
+319,1,1,45,Apartment,1695,Dublin 14,"Wyckham Pl, Dundrum, Sandyford, Dublin, Ireland",53.28140819999999,-6.2423238
+320,2,2,,Apartment,1850,Dublin 4,"2 49, 4 Pembroke Rd, Ballsbridge, Dublin, D04 C8P7, Ireland",53.3330011,-6.242188899999999
+321,1,1,,Apartment,1650,Dublin 4,"4 Fitzwilliam Quay, Dublin 4, D04 AE70, Ireland",53.34146,-6.2283137
+322,3,2,,,3250,Dublin,"Kilbarrack Rd, Donaghmede, Dublin, Ireland",53.38303209999999,-6.1486491
+323,2,2,,Apartment,2351,Dublin,"Kilbarrack Rd, Donaghmede, Dublin, Ireland",53.38303209999999,-6.1486491
+324,2,2,,Apartment,1900,Dublin 18,"Woodside, Dublin, Ireland",53.2599769,-6.222857299999999
+325,2,3,,Apartment,2350,Dublin 15,"Cherry Lodge, 13 Farmleigh Ave, Farmleigh Woods, Dublin 15, Ireland",53.3673079,-6.362718699999999
+326,,,,,POA,Dublin,"45 O'Connell Street Lower, North City, Dublin 1, D01 KV21, Ireland",53.348161,-6.2600387
+327,2,2,,Apartment,3300,Dublin 4,"New Pembroke Street North, Dublin 4, Co. Dublin, Ireland",53.3320446,-6.2326597
+328,1,1,14,Apartment,249,Dublin 7,"7 Grangegorman Lower, Dublin 7, D07 X8R6, Ireland",53.3528289,-6.2799665
+329,1,1,13.6,Apartment,230,Dublin 1,"1 Mayor Street Upper, North Wall, Dublin, D01 DR94, Ireland",53.3488421,-6.235937799999999
+330,3,1,,Apartment,2000,County Dublin,"Belfry Green, Gibbons, Dublin, Ireland",53.2780345,-6.4135863
+331,2,2,,Apartment,2300,Harold's Cross,"Harold's Cross, Dublin 6W, Co. Dublin, Ireland",53.32156879999999,-6.2853024
+332,3,2,,Apartment,2950,Dublin 1,"Castleforbes Rd & Castleforbes Square, Dublin Docklands, Dublin, Ireland",53.34929959999999,-6.2318942
+333,2,3,,Apartment,2150,Co. Dublin,"Honeypark, Dún Laoghaire, Co. Dublin, Ireland",53.2801069,-6.1436563
+334,2,1,,Apartment,1850,Dublin,"Block 4, Custom Hall, Gardiner Street Lower, North City, Dublin 1, Co. Dublin, Ireland",53.35254219999999,-6.255978499999999
+335,3,3,,,2125,Hollystown,"15 Hollywoodrath Rise, Hollystown, Dublin, D15 V1FD, Ireland",53.4247002,-6.3754445
+336,1,1,,Apartment,2200,Dublin,"2 Baggot Street Lower, Dublin, Ireland",53.3381447,-6.2530655
+337,1,1,,Apartment,1650,Dublin 9,"Apartment 1 Swiss Heights Swiss Cottage, Swords Rd, Whitehall, Dublin 9, D09 CXKO, Ireland",53.3959122,-6.2448474
+338,2,2,,Apartment,1775,Dublin 9,"Apartment 1 Swiss Heights Swiss Cottage, Swords Rd, Whitehall, Dublin 9, D09 CXKO, Ireland",53.3959122,-6.2448474
+339,2,1,,Apartment,1950,Dublin 1,"Custom House Square, Mayor Street Lower, International Financial Services Centre, Dublin 1, Ireland",53.34961699999999,-6.243003
+340,1,1,,Apartment,1447,Dublin 1,"Custom House Square, Mayor Street Lower, International Financial Services Centre, Dublin 1, Ireland",53.34961699999999,-6.243003
+341,3,2,,,2350,Co. Dublin,"Doddsborough, Lucan, Co. Dublin, Ireland",53.3473888,-6.4638741
+342,1,1,,Apartment,1450,Dublin,"1 Bachelors Walk, North City, Dublin 1, D01 P4V6, Ireland",53.3467902,-6.2631004
+343,2,2,,Apartment,1852,Dublin 7,"7 Arran St E, North City, Dublin, Ireland",53.3469023,-6.270007400000001
+344,1,1,,Apartment,1609,Dublin 7,"Smithfield Market, Smithfield, Dublin 7, Ireland",53.34885269999999,-6.279043499999999
+345,2,2,,Apartment,2950,Dublin 6,"Orwell Rd, Rathfarnham, Rathgar, Co. Dublin, Ireland",53.30846829999999,-6.269551799999999
+346,3,3,,Apartment,3000,Co. Dublin,"Glenageary Rd Upper, Honeypark, Dún Laoghaire, Co. Dublin, Ireland",53.2827277,-6.1426919
+347,3,2,,,2400,Co. Dublin,"St Edmunds Grove, Yellow Walls, Lucan, Co. Dublin, Ireland",53.3570798,-6.4104408
+348,3,2,,Apartment,2495,Dublin,"4 Merrion Court, Ailesbury Rd, Ballsbridge, Dublin, D04 YX65, Ireland",53.3202874,-6.2144137
+349,2,2,,Apartment,3100,Dublin,"Dublin Southside, Dublin, Co. Dublin, Ireland",53.3268543,-6.2323521
+350,,,,,POA,Dublin,"1 Sherrard Street Lower, Dublin 1, D01 HK37, Ireland",53.3593252,-6.258375099999999
+351,2,1,,Terraced House,2122,Dublin 6,"4 Castlewood Terrace, Rathmines, Dublin 6, D06 Y0A9, Ireland",53.3234331,-6.263598
+352,7,7,12,Apartment,225,Dublin 11,"11 Ballymun Rd, Botanic, Dublin 9, D09 E3C1, Ireland",53.37819959999999,-6.2681799
+353,1,1,6,Apartment,1472,Cabinteely,"Abbey Glen, Johnstown, Dublin 18, D18 EE92, Ireland",53.2650338,-6.1486624
+354,,,,Apartment,POA,Dublin,"Sean McDermott Street, North City, Dublin 1, Co. Dublin, Ireland",53.3526073,-6.2577897
+355,,2,1300ft 2,,3000,Dublin 12,"Scoil Iosagaín 73-86 Aughavannagh Road, Harold's Cross, Drimnagh, Dublin, D12 W522, Ireland",53.3300364,-6.285847299999999
+356,2,1,,Apartment,2400,Co. Dublin,"Booterstown Ave, Merrion, Blackrock, Co. Dublin, Ireland",53.3004639,-6.2046876
+357,2,2,,Penthouse,4175,Dublin 4,"Herbert Park Ln, Dublin, Ireland",53.3276529,-6.231466699999999
+358,2,1,,Apartment,2022,Co. Dublin,"95 Beechwood Ct, Galloping Green North, Dublin, Ireland",53.28124,-6.190779099999999
+359,1,1,,Apartment,1360.12,Dublin 6,"Belgrave Court, Mountpleasant Ave Upper, Rathmines, Dublin 6, Ireland",53.3245551,-6.2601139
+360,2,2,,Apartment,2310,Co. Dublin,"The Grange, Abalone, Brewery Rd, Stillorgan, Dublin, Co. Dublin, Ireland",53.2803114,-6.1925286
+361,3,2,171,Apartment,3500,Dublin 18,"Ireland, 18 Sandyford Rd, Sandyford, Dublin, Co. Dublin, Ireland",53.2768805,-6.2169303
+362,4,,,Semi-Detached,2940,Dublin 18,"18 Foxrock Mount, Deansgrange, Dublin 18, D18 W6R0, Ireland",53.2755307,-6.1775528
+363,2,1,,Apartment,2200,Dublin 4,"Apartment 27, Eastmoreland Court, Eastmoreland Pl, Ballsbridge, Dublin, Ireland",53.3342687,-6.2421769
+364,6,6,,,7500,Co. Dublin,"Willowbrooke, Saval Park Rd, Dalkey, Co. Dublin, Ireland",53.2717617,-6.114665
+365,2,2,,Apartment,2100,Dublin 2,"13 Eastmoreland Pl, Ballsbridge, Dublin 4, D04 HK51, Ireland",53.3332393,-6.2420702
+366,4,3,,Terraced House,5500,Dublin,"2 Baggot Street Lower, Dublin, Ireland",53.3381447,-6.2530655
+367,1,1,,Apartment,1850,Dublin 4,"84 Leeson Street Upper, Dublin, D04 V4F1, Ireland",53.3287364,-6.2463891
+368,4,5,,Terraced House,9750,Dublin 4,"41 Wellington Rd, Ballsbridge, Dublin, D04 R3K4, Ireland",53.3302018,-6.2419574
+369,3,3,,,2850,Dublin 4,"96 Shrewsbury, Dublin 4, D04 V741, Ireland",53.3261827,-6.2190127
+370,2,1,,Apartment,2900,Donnybrook,"Dunluce, Anglesea Rd, 19, Dublin 4, Co. Dublin, D04 Y7V0, Ireland",53.3247064,-6.232056399999999
+371,2,2,,Apartment,1950,Dublin 20,"Rotunda, Dublin 1, D01 N528, Ireland",53.3514264,-6.2640812
+372,2,1,,Apartment,2150,Dublin 4,"21 Shrewsbury Park, Ballsbridge, Dublin 4, D04 V0T6, Ireland",53.3251083,-6.2179037
+373,3,1,,Terraced House,2390,Dublin 3,"38 The Bramblings, Clontarf West, Dublin 5, D05 V382, Ireland",53.3734427,-6.2071593
+374,3,1,,Terraced House,2600,Dublin,"3 The Bramblings, Clontarf West, Dublin 5, D05 XC85, Ireland",53.373382,-6.2062729
+375,2,2,,Apartment,2200,Dublin 4,"The Gasworks, S Lotts Rd, Dublin 4, Ireland",53.3390643,-6.2351068
+376,2,2,,Semi-Detached,2600,Dublin 6W,"6w, 14 College Park, Terenure, Dublin 6W, Co. Dublin, D6W HH90, Ireland",53.304682,-6.305037899999999
+377,3,2,,Terraced House,2346,Co. Dublin,"Shackleton Heath, Doddsborough, Co. Dublin, Ireland",53.34479109999999,-6.4675083
+378,3,2,150,Terraced House,3175,Dublin 6W,"39 Kimmage Rd Lower, Kimmage, Harold's Cross, Dublin 6W, Co. Dublin, D6W DD35, Ireland",53.322549,-6.2822581
+379,1,1,,Apartment,230,Dublin 1,"1 Mayor Street Lower, Dublin Docklands, Dublin, Ireland",53.3496963,-6.2454128
+380,1,1,,Apartment,240,Dublin 7,"7 Grangegorman Lower, Dublin 7, D07 X8R6, Ireland",53.3528289,-6.2799665
+381,1,1,,Apartment,240,Dublin 1,"Mountjoy Square Park, Mountjoy Square, Mountjoy, Dublin, Ireland",53.35663479999999,-6.257447399999999
+382,3,2,95,Apartment,2595,Leopardstown,"Ballyogan Rd, Carmanhall and Leopardstown, Dublin 18, D18 R583, Ireland",53.2601783,-6.2070873
+383,2,2,,Apartment,2295,Cabinteely,"Abbey Glen, Johnstown, Dublin 18, D18 EE92, Ireland",53.2650338,-6.1486624
+384,2,1,,Penthouse,3600,Dublin 2,"Park Chambers, 13 St Stephen's Green, Dublin, D02 A364, Ireland",53.3396526,-6.258938
+385,5,,,,10000,Dublin 4,"4 Nutley Ln, Dublin 4, Ireland",53.3153348,-6.2230187
+386,4,,,,4000,Dublin 14,"34 Roebuck Castle, Roebuck, Dublin 14, D14 HH21, Ireland",53.3028051,-6.2250101
+387,1,1,,Apartment,220,Dublin,"Stillorgan Rd, Trimblestown, Dublin 4, Ireland",53.3084907,-6.2146417
+388,3,2,85,Apartment,1883,Dublin 5,"Block 4, 5 Watermill Rd, Clontarf East, Dublin, Co. Dublin City, D05 Y177, Ireland",53.37957609999999,-6.1776274
+389,2,1,,Apartment,1750,Dublin 20,"20 The Steeples, Chapelizod, Dublin, Ireland",53.3432961,-6.3388751
+390,2,2,,Apartment,2573,Harold's Cross,"Harold's Cross, Dublin 6W, Co. Dublin, Ireland",53.32156879999999,-6.2853024
+391,1,1,37,Apartment,1700,Dublin,"Northbrook Ave, Ranelagh, Dublin, 6, Ireland",53.3274742,-6.2539199
+392,3,2,125,Penthouse,4500,Dublin 2,"Hanover Dock, Dublin Docklands, Dublin 2, Ireland",53.3447538,-6.2380521
+393,4,4,325,Penthouse,7600,Dublin 4,"Ballsbridge Wood, Shelbourne Rd, Ballsbridge, Dublin 4, Ireland",53.332702,-6.2294395
+394,3,2,,,2364,County Dublin,"Doddsborough, Lucan, Co. Dublin, K78 H9E5, Ireland",53.347736,-6.463826699999999
+395,2,2,,Apartment,2100,Dublin 9,"Block A1, Bridgefield, Northwood Ave, Santry, Dublin 9, D09 P2YF, Ireland",53.40596069999999,-6.257687199999999
+396,,,,Apartment,POA,Dublin 6,"6 Kenilworth Rd, Rathmines, Dublin 6, D06 Y068, Ireland",53.3201155,-6.2739189
+397,,,,Apartment,POA,Dublin 4,"Cranford Court, Stillorgan Rd, Priesthouse, Dublin 4, Ireland",53.31036049999999,-6.2161754
+398,,,,Apartment,POA,Dublin 8,"Apartment 16, Christchurch View, Nicholas St, Dublin 8, Ireland",53.342423,-6.271094199999999
+399,,,,House,POA,Dublin 6,"6 Leicester Ave, Rathmines, Dublin 6, D06 W1R0, Ireland",53.31754979999999,-6.2723603
+400,,,,Apartment,POA,Dublin,"1 Bachelors Walk, North City, Dublin 1, D01 P4V6, Ireland",53.3467902,-6.2631004
+401,,,,Apartment,POA,Dublin 8,"8 Bow Bridge, Kilmainham, Dublin, D08 E4E3, Ireland",53.34250609999999,-6.2967536
+402,3,1,85,Terraced House,2600,Dublin,"2 Sheepmoor Cl, Blakestown, Dublin, D15 VR0C, Ireland",53.3931605,-6.403212
+403,2,1,,Apartment,4200,Dublin,"1 Castleforbes Square, Dublin Docklands, Dublin, Ireland",53.34929289999999,-6.2317907
+404,1,1,,Apartment,3800,Dublin,"60 Sir John Rogerson's Quay, Grand Canal Dock, Dublin, D02 YN22, Ireland",53.34539909999999,-6.236101000000001
+405,1,1,,Apartment,1900,Dublin,"1 Seville Pl, North Dock, Dublin, Ireland",53.3529034,-6.244477799999999
+406,1,1,,Apartment,1500,Dublin,"Cherrywood Rd, Dublin, Ireland",53.24225209999999,-6.1365564
+407,1,1,,Apartment,1191,Dublin,"9 Whitworth Rd, Wigan Rd, Botanic, Dublin 9, D09 X5T9, Ireland",53.3644486,-6.2668729
+408,2,2,,Apartment,1975,Dublin 11,"43 Fitzwilliam Square W, Dublin 2, D02 K792, Ireland",53.33579169999999,-6.2533531
+409,3,1,,Bungalow,2200,Dublin 24,"Castlekelly, Dublin 24, Ireland",53.22001299999999,-6.340955999999999
+410,2,2,100,Apartment,3300,Dublin 6,"Milltown Ave, Ranelagh, Dublin, Ireland",53.3139461,-6.2494032
+411,5,5,2300ft 2,Detached,7000,Dublin 4,"126 Merrion Rd, Dublin, D04 E2P5, Ireland",53.3236727,-6.2193605
+412,1,1,,Apartment,1500,Dublin,"Temple Court, Hogan Pl, Dublin 2, Ireland",53.3407011,-6.2437463
+413,1,1,,Apartment,1568,Dublin 9,"Apartment 12, Saint Mobhi Court, St Mobhi Boithirin, Botanic, Dublin 9, D09 HE28, Ireland",53.3771624,-6.266604999999999
+414,3,,,Bungalow,2665,Dublin 4,"4 Shrewsbury, Dublin, D04 F2W5, Ireland",53.32535679999999,-6.2201361
+415,3,2,,Semi-Detached,2150,Dublin,"55 The Green, Beaumont Woods, Beaumont, Dublin, D09 PK85, Ireland",53.3901568,-6.233245399999999
+416,1,1,,Apartment,630,Dublin 1,"Clarion Quay, N Wall Quay, North Wall, Dublin 1, Ireland",53.3490556,-6.2447174
+417,2,3,1710ft 2,Apartment,6000,Dublin 4,"Ballsbridge, Dublin, Ireland",53.3265731,-6.225861099999999
+418,1,1,,Apartment,1469,Dublin,"Sandwith Street Lower & Westland Square, Dublin, Ireland",53.34440799999999,-6.246901299999999
+419,,1,63,Apartment,2500,Dublin,"4 Shrewsbury, Ballsbridge, Dublin 4, D04 F2W5, Ireland",53.32537060000001,-6.2201603

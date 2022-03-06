@@ -339,8 +339,7 @@ def scrape_data():
         # base_url = "https://www.myhome.ie/rentals/dublin/property-to-rent-in-dublin-12?page="
         base_url = "https://www.myhome.ie/residential/dublin/property-for-sale?page="
         city_name = city_name + "_sell"
-    # scrape_data(city_name, city_name, page_number, base_url, data_type)
-
+    scrape_data(city_name, city_name, page_number, base_url, data_type)
     # import data
     data = pd.read_csv('data/' + city_name + '.csv')
     size = len(data)
@@ -367,7 +366,7 @@ def clean_data():
     else:
         city_name = city_name + "_sell"
     key = get_google_key()
-    # convert_address_to_lat_and_lng("./data/" + city_name, key)
+    convert_address_to_lat_and_lng("./data/" + city_name, key)
 
     # import data
     data = pd.read_csv('data/' + city_name + '_new.csv')

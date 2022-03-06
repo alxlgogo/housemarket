@@ -1,12 +1,13 @@
 from bs4 import BeautifulSoup
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+# from sqlalchemy import create_engine
+# from sqlalchemy.orm import sessionmaker
 import requests
 import csv
 import pandas as pd
 
 # Get all house rental page url
 from models.keys import Keys
+import pymysql.cursors
 
 
 def get_urls(city_name, page_number, base_url):
@@ -103,11 +104,10 @@ def convert_address_to_lat_and_lng(city_name, key):
             full_address.append(formatted_address)
     data['latitude'] = latitude
     data['longitude'] = longitude
-    # data.drop(["address"])
-    # data['full_address'] = full_address
+    data.drop(["address"])
+    data['full_address'] = full_address
     data['address'] = full_address
     write_data_to_csv(data, city_name)
-
 
 def remove_data_unit(data):
     beds = data['bed']
@@ -137,9 +137,26 @@ def remove_data_unit(data):
         if pd.isnull(cube):
             new_cubes.append(cube)
         else:
-            per = cube.strip().split("m")[0].strip()
-            new_cubes.append(per)
+            cube = "".join(cube.split())
+            if (cube.find('-')) != -1:
+                x = cube.split("-")
+                new_cubes.append(x[0])
+            else:
+                if (cube.find('m')) != -1:
+                    x = cube.split("m2")
+                    new_cubes.append(x[0])
+                if (cube.find('ft')) != -1:
+                    x = cube.split("ft")
+                    x1 = float(x[0])/3.281
+                    x1 = str(round(x1, 2))
+                    new_cubes.append(x1)
     data['cube'] = new_cubes
+    data = data.dropna()
+    for index, row in data.iterrows():
+        if not row['price'].isnumeric():
+            data.drop(index, inplace=True)
+
+    # data = data.rename({'Unnamed: 0': 'index'}, axis=1)
     return data
 
 
@@ -157,15 +174,33 @@ def write_data_to_csv(data, city_name):
 
 
 def get_google_key():
-    engine = create_engine("mysql://root:root@127.0.0.1:3306/housemarket", pool_size=8)
-    DbSession = sessionmaker(bind=engine)
-    session = DbSession()
-    keys = session.query(Keys).filter_by(key_name='google_key').all()
-    key_value = ""
-    if len(keys) == 1:
-        key_value = keys[0].key_value
-    session.close()
+    # engine = create_engine("mysql://root:root@127.0.0.1:3306/housemarket", pool_size=8)
+    # DbSession = sessionmaker(bind=engine)
+    # session = DbSession()
+    # keys = session.query(Keys).filter_by(key_name='google_key').all()
+    # key_value = ""
+    # if len(keys) == 1:
+    #     key_value = keys[0].key_value
+    # session.close()
+    key_value = get_key()
     return key_value
 # convert_address_to_lat_and_lng("Dublin")
 
 # get_google_key()
+
+def get_key():
+    connect = pymysql.Connect(
+        host='localhost',
+        port=3306,
+        user='root',
+        passwd='root1234',
+        db='housemarket'
+    )
+
+    cursor = connect.cursor()
+    sql = "SELECT * FROM housemarket.keys where key_name='google_key'; "
+    cursor.execute(sql)
+    key_value = ""
+    for row in cursor.fetchall():
+        key_value = row[2]
+    return key_value

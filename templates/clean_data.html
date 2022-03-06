@@ -98,7 +98,7 @@
                     <a class="nav-link" href="/go_to_clean_data">Clean data</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/monitor">Time serious</a>
+                    <a class="nav-link" href="/monitor">time series</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="rental_market">Rental market</a>
@@ -131,7 +131,7 @@
         <div class="col-md-3 scrape-data-form">
             <form role="form" action="/clean_data" id="scrape_data_form" method="POST" style="margin-left: 35px">
                 {#            <form role="form" id="scrape_data_form" style="margin-left: 35px">#}
-                <div class="form-group">
+                <div class="form-group" style="margin-top: 15px">
                     <label for="exampleInputPassword1">
                         <h5>City:</h5>
                     </label>
@@ -161,16 +161,7 @@
                     </span>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-xs-3">
-                        <label for="pageNumber">
-                            <h5>
-                                Number:
-                            </h5>
-                        </label>
-                        <input type="text" class="form-control" name="pageNumber" style="width: 50%"/>
-                    </div>
-                </div>
+
                 <button type="submit" id="form_submit" class="btn btn-info">
                     Submit
                 </button>
@@ -198,12 +189,6 @@
                 </dd>
                 <dd>
                     selling：scrape rental information.
-                </dd>
-                <dt>
-                    Number:
-                </dt>
-                <dd>
-                    Manually set how many pages of data to Scrape.
                 </dd>
                 <dt>
                     Submit:

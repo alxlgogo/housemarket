@@ -382,6 +382,7 @@ def clean_data():
         pages = list(range(1, size + 1))
     row_data = list(data.values.tolist())
     heads = data.columns
+    row_data = row_data.drop("Unnamed: 0", 1)
     return render_template('clean_data.html', row_data=row_data, heads=heads, pages=pages)
 
 

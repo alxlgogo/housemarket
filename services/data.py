@@ -1,3 +1,5 @@
+import json
+
 from bs4 import BeautifulSoup
 # from sqlalchemy import create_engine
 # from sqlalchemy.orm import sessionmaker
@@ -8,6 +10,10 @@ import pandas as pd
 # Get all house rental page url
 from models.keys import Keys
 import pymysql.cursors
+
+# Dublin Castle location
+destination_lat = "53.34288609999999"
+destination_lng = "-6.2674284"
 
 
 def get_urls(city_name, page_number, base_url):
@@ -87,6 +93,7 @@ def convert_address_to_lat_and_lng(city_name, key):
     longitude = []
     latitude = []
     full_address = []
+    distances = []
     addresses = data['address']
     for location in addresses:
         is_na_n = pd.isna(location)
@@ -102,12 +109,17 @@ def convert_address_to_lat_and_lng(city_name, key):
             latitude.append(geo_latitude)
             longitude.append(geo_longitude)
             full_address.append(formatted_address)
+            distance = get_distance(str(geo_latitude), str(geo_longitude), destination_lat, destination_lng, key)
+            distances.append(distance)
     data['latitude'] = latitude
     data['longitude'] = longitude
-    data.drop(["address"])
-    data['full_address'] = full_address
+    # data.drop(["address"])
+    # data['full_address'] = full_address
+    data['distance'] = distances
     data['address'] = full_address
+
     write_data_to_csv(data, city_name)
+
 
 def remove_data_unit(data):
     beds = data['bed']
@@ -147,7 +159,7 @@ def remove_data_unit(data):
                     new_cubes.append(x[0])
                 if (cube.find('ft')) != -1:
                     x = cube.split("ft")
-                    x1 = float(x[0])/3.281
+                    x1 = float(x[0]) / 3.281
                     x1 = str(round(x1, 2))
                     new_cubes.append(x1)
     data['cube'] = new_cubes
@@ -184,6 +196,8 @@ def get_google_key():
     # session.close()
     key_value = get_key()
     return key_value
+
+
 # convert_address_to_lat_and_lng("Dublin")
 
 # get_google_key()
@@ -204,3 +218,19 @@ def get_key():
     for row in cursor.fetchall():
         key_value = row[2]
     return key_value
+
+
+def get_distance(ori_lat, ori_lng, dest_lat, des_lng, key):
+    url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + ori_lat + "%2C" + ori_lng + "&destinations=" + dest_lat + "%2C" + des_lng + "&key=" + key
+    payload = {}
+    headers = {}
+    response = requests.request("GET", url, headers=headers, data=payload)
+    json_object = json.loads(response.text)
+    rows = json_object.get("rows")
+    row1 = rows[0]
+    elements = row1.get("elements")
+    distance = elements[0].get("distance")
+    distance_value = distance.get("value")
+    duration = elements[0].get("duration")
+    duration_value = duration.get("value")
+    return distance_value

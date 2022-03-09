@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Home</title>
+    <title>Prediction</title>
 
     <meta name="description" content="Source code generated using layoutit.com">
     <meta name="author" content="LayoutIt!">
@@ -70,66 +70,155 @@
         </div>
     </div>
 </div>
-{# Carousel #}
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="row">
-                <div class="carousel slide" id="carousel-896333">
-                    <ol class="carousel-indicators">
-                        <li data-slide-to="0" data-target="#carousel-896333" class="active">
-                        </li>
-                        <li data-slide-to="1" data-target="#carousel-896333">
-                        </li>
-                        <li data-slide-to="2" data-target="#carousel-896333">
-                        </li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block w-100" alt="Carousel Bootstrap First"
-                                 src="{{ url_for('static',filename='img/1page.jpeg') }}"/>
-                            <div class="carousel-caption">
-                                <h4>
-                                    When and at what price to buy or sell a house?
-                                </h4>
-                                <p>
-                                    Help you get more investment income.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" alt="Carousel Bootstrap Second"
-                                 src="{{ url_for('static',filename='img/2page.jpeg') }}"/>
-                            <div class="carousel-caption">
-                                <h4>
-                                    Help people make decisions
-                                </h4>
-                                <p>
-                                    Concentrate, extract and refine data to find inner patterns.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" alt="Carousel Bootstrap Third"
-                                 src="{{ url_for('static',filename='img/3page.jpeg') }}"/>
-                            <div class="carousel-caption">
-                                <h4>
-                                    Data analysis process
-                                </h4>
-                                <p>
-                                    Clear goals, clear processes, and scientific predictions.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    {#                    <a class="carousel-control-prev" href="#carousel-896333" data-slide="prev"><span#}
-                    {#                            class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span></a> <a#}
-                    {#                        class="carousel-control-next" href="#carousel-896333" data-slide="next"><span#}
-                    {#                        class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>#}
+{# prediction #}
+<div class="container-fluid" style="border: 1px solid lightblue;border-radius: 3px;">
+	<div class="row" style="margin-top: 30px;margin-bottom: 30px">
+		<div class="col-md-3">
+			<h3 class="text-left" style="margin-bottom: 30px">
+				House Information
+			</h3>
+			<form role="form" action="/predict" method="POST">
+				<div class="form-group">
+					<label for="beds">
+						Beds
+					</label>
+					<input type="text" class="form-control" id="beds" name="beds" value="{{ beds }}"/>
+				</div>
+				<div class="form-group">
+					<label for="Bath">
+						Bath
+					</label>
+					<input type="text" class="form-control" id="Bath" name="bath" value="{{ bath }}"/>
+				</div>
+
+                <div class="form-group">
+					<label for="cube">
+						Area
+					</label>
+					<input type="text" class="form-control" id="cube" name="cube" value="{{ cube }}"/>
+				</div>
+				<div class="form-group">
+					<label for="Address">
+						Address
+					</label>
+					<input type="text" class="form-control" id="Address" name="address" value="{{ address }}"/>
+				</div>
+
+				<button type="submit" class="btn btn-primary">
+					Predict
+				</button>
+			</form>
+		</div>
+		<div class="col-md-9">
+			<h3 class="text-center" style="margin-bottom: 30px">
+				Models and predictions
+			</h3>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card">
+						<img class="card-img-top" style="margin-bottom: 10px;" alt="Bootstrap Thumbnail First" src="{{ url_for('static',filename='img/euro_price.jpg') }}" />
+						<div class="card-block">
+							<h5 class="card-title" style="margin-bottom: 20px;">
+								Estimated Price: (Euro)
+							</h5>
+{#							<p class="card-text">#}
+{#								Estimated price:#}
+{#							</p>#}
+							<p style="font-size: 3em;margin-bottom: 45px; color: #3c763d">
+                                <b>{{ price }}</b>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card">
+						<img class="card-img-top" alt="Bootstrap Thumbnail First" src="{{ url_for('static',filename='img/Acuracy.jpg') }}" />
+						<div class="card-block">
+							<h5 class="card-title">
+								Model Accuracy : R-square
+							</h5>
+							<p class="card-text">
+								The R-square is between [0, 1], the closer it is to 1, the better the model.
+							</p>
+							<p style="font-size: 3em;">
+								{{ rsquared }}
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card">
+                        <img class="card-img-top" alt="Bootstrap Thumbnail First" src="{{ url_for('static',filename='img/factors.jpg') }}" />
+						<div class="col-md-4">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>
+                                #
+                            </th>
+                            <th>
+                                Features
+                            </th>
+                            <th>
+                                P-value
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                Bed
+                            </td>
+                            <td>
+                                {{ pvalue_bed }}
+                            </td>
+                        </tr>
+                        <tr class="">
+                            <td>
+                                2
+                            </td>
+                            <td>
+                                Bath
+                            </td>
+                            <td>
+                                {{ pvalue_bath }}
+                            </td>
+                        </tr>
+                        <tr class="">
+                            <td>
+                                3
+                            </td>
+                            <td>
+                                Area
+                            </td>
+                            <td>
+                                {{ pvalue_cube }}
+                            </td>
+
+                        </tr>
+                        <tr class="">
+                            <td>
+                                4
+                            </td>
+                            <td>
+                                Address
+                            </td>
+                            <td>
+                                {{ pvalue_distance }}
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
                 </div>
-            </div>
-        </div>
-    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 {# Footer #}

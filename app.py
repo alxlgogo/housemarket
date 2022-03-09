@@ -6,9 +6,13 @@ import statsmodels.api as sm
 from flask import Flask, render_template, request, jsonify
 from models.house import house
 from services.scrapeData import getHouseData, getHouseLocation
-from services.data import scrape_data, convert_address_to_lat_and_lng, get_google_key
+from services.data import scrape_data, convert_address_to_lat_and_lng, get_google_key, get_latitude_and_longitude, \
+    get_distance, destination_lat, destination_lng
 from collections import OrderedDict
 from statsmodels.tsa.arima.model import ARIMA
+from sklearn.linear_model import LinearRegression
+from pandas.plotting import scatter_matrix
+import matplotlib.pyplot as plt
 
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
@@ -556,3 +560,53 @@ def get_area_percentage_data(data):
 @app.route('/data', methods=['GET', 'POST'])
 def data():
     return render_template('scrape_data.html')
+
+
+@app.route('/go_to_predict', methods=['GET', 'POST'])
+def go_to_predict():
+    return render_template('prediction.html')
+
+
+@app.route('/predict', methods=['GET', 'POST'])
+def predict():
+    beds = request.form['beds']
+    bath = request.form['bath']
+    cube = request.form['cube']
+    address = request.form['address']
+
+    # get distance
+    key = get_google_key()
+    geo_data = get_latitude_and_longitude(address, key)
+    geo_latitude = geo_data['results'][0]['geometry']['location']['lat']
+    geo_longitude = geo_data['results'][0]['geometry']['location']['lng']
+    formatted_address = geo_data['results'][0]['formatted_address']
+    distance = get_distance(str(geo_latitude), str(geo_longitude), destination_lat, destination_lng, key)
+    # distance = 50000
+
+    # training model
+    data = pd.read_csv("data/Dublin_sell_new.csv")
+    X = data[['bed', 'bath', 'cube', 'distance']]
+    y = data['price']
+    X2 = sm.add_constant(X)
+    est = sm.OLS(y, X2)
+    est2 = est.fit()
+    rsquared = round(est2.rsquared, 5)
+    pvalue_bed = round(est2.pvalues.bed, 5)
+    pvalue_bath = round(est2.pvalues.bath, 5)
+    pvalue_cube = round(est2.pvalues.cube, 5)
+    pvalue_distance = round(est2.pvalues.distance, 5)
+    model = get_prdiect_price_model(X, y)
+
+    newData = [[beds, bath, cube, distance]]
+    newDF = pd.DataFrame(newData, columns=['bed', 'bath', 'cube', 'distance'])
+    price = model.predict(newDF)
+    price = round(price[0], 2)
+    return render_template('prediction.html', beds=beds, bath=bath, cube=cube, address=address, price=price,
+                           rsquared=rsquared, pvalue_bed=pvalue_bed, pvalue_bath=pvalue_bath, pvalue_cube=pvalue_cube,
+                           pvalue_distance=pvalue_distance)
+
+
+def get_prdiect_price_model(X, y):
+    model = LinearRegression()
+    model.fit(X, y)
+    return model

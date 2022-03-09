@@ -217,6 +217,7 @@ def get_key():
     key_value = ""
     for row in cursor.fetchall():
         key_value = row[2]
+    connect.close();
     return key_value
 
 

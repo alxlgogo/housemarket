@@ -75,7 +75,7 @@ def parse_page(soup, writer, data_type):
         writer.writerow([bed, bath, cube, home, price, area, address])
 
 
-def scrape_data(city_name, file_name, page_number, base_url, data_type):
+def scrape_data_service(city_name, file_name, page_number, base_url, data_type):
     file = open("./data/" + file_name + '.csv', 'w')
     writer = csv.writer(file)
     writer.writerow(['bed', 'bath', 'cube', 'home', 'price', 'area', 'address'])
@@ -201,7 +201,6 @@ def get_google_key():
 # convert_address_to_lat_and_lng("Dublin")
 
 # get_google_key()
-
 def get_key():
     connect = pymysql.Connect(
         host='localhost',

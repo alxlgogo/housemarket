@@ -6,7 +6,8 @@ import statsmodels.api as sm
 from flask import Flask, render_template, request, jsonify
 from models.house import house
 from services.scrapeData import getHouseData, getHouseLocation
-from services.data import scrape_data, convert_address_to_lat_and_lng, get_google_key, get_latitude_and_longitude, \
+from services.data import scrape_data_service, convert_address_to_lat_and_lng, get_google_key, \
+    get_latitude_and_longitude, \
     get_distance, destination_lat, destination_lng
 from collections import OrderedDict
 from statsmodels.tsa.arima.model import ARIMA
@@ -343,7 +344,7 @@ def scrape_data():
         # base_url = "https://www.myhome.ie/rentals/dublin/property-to-rent-in-dublin-12?page="
         base_url = "https://www.myhome.ie/residential/dublin/property-for-sale?page="
         city_name = city_name + "_sell"
-    scrape_data(city_name, city_name, page_number, base_url, data_type)
+    # scrape_data_service(city_name, city_name, page_number, base_url, data_type)
     # import data
     data = pd.read_csv('data/' + city_name + '.csv')
     size = len(data)
@@ -370,7 +371,7 @@ def clean_data():
     else:
         city_name = city_name + "_sell"
     key = get_google_key()
-    convert_address_to_lat_and_lng("./data/" + city_name, key)
+    # convert_address_to_lat_and_lng("./data/" + city_name, key)
 
     # import data
     data = pd.read_csv('data/' + city_name + '_new.csv')
@@ -386,7 +387,7 @@ def clean_data():
         pages = list(range(1, size + 1))
     row_data = list(data.values.tolist())
     heads = data.columns
-    row_data = row_data.drop("Unnamed: 0", 1)
+    # row_data = row_data.drop("Unnamed: 0", 1)
     return render_template('clean_data.html', row_data=row_data, heads=heads, pages=pages)
 
 
@@ -573,6 +574,7 @@ def predict():
     bath = request.form['bath']
     cube = request.form['cube']
     address = request.form['address']
+    origin_price = request.form['origin_price']
 
     # get distance
     key = get_google_key()
@@ -590,20 +592,21 @@ def predict():
     X2 = sm.add_constant(X)
     est = sm.OLS(y, X2)
     est2 = est.fit()
-    rsquared = round(est2.rsquared, 5)
-    pvalue_bed = round(est2.pvalues.bed, 5)
-    pvalue_bath = round(est2.pvalues.bath, 5)
-    pvalue_cube = round(est2.pvalues.cube, 5)
-    pvalue_distance = round(est2.pvalues.distance, 5)
+    rsquared = str(round(est2.rsquared, 5))
+    pvalue_bed = str(round(est2.pvalues.bed, 5))
+    pvalue_bath = str(round(est2.pvalues.bath, 5))
+    pvalue_cube = str(est2.pvalues.cube)
+    pvalue_distance = str(round(est2.pvalues.distance, 5))
     model = get_prdiect_price_model(X, y)
 
     newData = [[beds, bath, cube, distance]]
     newDF = pd.DataFrame(newData, columns=['bed', 'bath', 'cube', 'distance'])
     price = model.predict(newDF)
-    price = round(price[0], 2)
+    price = str(round(price[0], 2))
+    diff_price = str(round(float(origin_price) - float(price),2))
     return render_template('prediction.html', beds=beds, bath=bath, cube=cube, address=address, price=price,
                            rsquared=rsquared, pvalue_bed=pvalue_bed, pvalue_bath=pvalue_bath, pvalue_cube=pvalue_cube,
-                           pvalue_distance=pvalue_distance)
+                           pvalue_distance=pvalue_distance, origin_price=origin_price, diff_price=diff_price)
 
 
 def get_prdiect_price_model(X, y):

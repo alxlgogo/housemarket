@@ -36,7 +36,7 @@
             </h1>
 
             <ul class="nav" style="margin-top: 10px;font-size: 18px">
-                 <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link" href="/home">Home</a>
                 </li>
                 <li class="nav-item">
@@ -73,153 +73,193 @@
 </div>
 {# prediction #}
 <div class="container-fluid" style="border: 1px solid lightblue;border-radius: 3px;">
-	<div class="row" style="margin-top: 30px;margin-bottom: 30px">
-		<div class="col-md-3">
-			<h3 class="text-left" style="margin-bottom: 30px">
-				House Information
-			</h3>
-			<form role="form" action="/predict" method="POST">
-				<div class="form-group">
-					<label for="beds">
-						Beds
-					</label>
-					<input type="text" class="form-control" id="beds" name="beds" value="{{ beds }}"/>
-				</div>
-				<div class="form-group">
-					<label for="Bath">
-						Bath
-					</label>
-					<input type="text" class="form-control" id="Bath" name="bath" value="{{ bath }}"/>
-				</div>
+    <div class="row" style="margin-top: 30px;margin-bottom: 30px">
+        <div class="col-md-3">
+            <h3 class="text-left" style="margin-bottom: 30px">
+                House Information
+            </h3>
+            <form role="form" action="/predict" method="POST">
+                <div class="form-group">
+                    <label for="beds">
+                        Beds
+                    </label>
+                    <input type="text" class="form-control" id="beds" name="beds" value="{{ beds }}"/>
+                </div>
+                <div class="form-group">
+                    <label for="Bath">
+                        Bath
+                    </label>
+                    <input type="text" class="form-control" id="Bath" name="bath" value="{{ bath }}"/>
+                </div>
 
                 <div class="form-group">
-					<label for="cube">
-						Area
-					</label>
-					<input type="text" class="form-control" id="cube" name="cube" value="{{ cube }}"/>
-				</div>
-				<div class="form-group">
-					<label for="Address">
-						Address
-					</label>
-					<input type="text" class="form-control" id="Address" name="address" value="{{ address }}"/>
-				</div>
-
-				<button type="submit" class="btn btn-primary">
-					Predict
-				</button>
-			</form>
-		</div>
-		<div class="col-md-9">
-			<h3 class="text-center" style="margin-bottom: 30px">
-				Models and predictions
-			</h3>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="card">
-						<img class="card-img-top" style="margin-bottom: 10px;" alt="Bootstrap Thumbnail First" src="{{ url_for('static',filename='img/euro_price.jpg') }}" />
-						<div class="card-block">
-							<h5 class="card-title" style="margin-bottom: 20px;">
-								Estimated Price: (Euro)
-							</h5>
-{#							<p class="card-text">#}
-{#								Estimated price:#}
-{#							</p>#}
-							<p style="font-size: 3em;margin-bottom: 45px; color: #3c763d">
-                                <b>{{ price }}</b>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="card">
-						<img class="card-img-top" alt="Bootstrap Thumbnail First" src="{{ url_for('static',filename='img/Acuracy.jpg') }}" />
-						<div class="card-block">
-							<h5 class="card-title">
-								Model Accuracy : R-square
-							</h5>
-							<p class="card-text">
-								The R-square is between [0, 1], the closer it is to 1, the better the model.
-							</p>
-							<p style="font-size: 3em;">
-								{{ rsquared }}
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="card">
-                        <img class="card-img-top" alt="Bootstrap Thumbnail First" src="{{ url_for('static',filename='img/factors.jpg') }}" />
-						<div class="col-md-4">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>
-                                #
-                            </th>
-                            <th>
-                                Features
-                            </th>
-                            <th>
-                                P-value
-                            </th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>
-                                1
-                            </td>
-                            <td>
-                                Bed
-                            </td>
-                            <td>
-                                {{ pvalue_bed }}
-                            </td>
-                        </tr>
-                        <tr class="">
-                            <td>
-                                2
-                            </td>
-                            <td>
-                                Bath
-                            </td>
-                            <td>
-                                {{ pvalue_bath }}
-                            </td>
-                        </tr>
-                        <tr class="">
-                            <td>
-                                3
-                            </td>
-                            <td>
-                                Area
-                            </td>
-                            <td>
-                                {{ pvalue_cube }}
-                            </td>
-
-                        </tr>
-                        <tr class="">
-                            <td>
-                                4
-                            </td>
-                            <td>
-                                Address
-                            </td>
-                            <td>
-                                {{ pvalue_distance }}
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-
+                    <label for="cube">
+                        Area
+                    </label>
+                    <input type="text" class="form-control" id="cube" name="cube" value="{{ cube }}"/>
                 </div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                <div class="form-group">
+                    <label for="Address">
+                        Address
+                    </label>
+                    <input type="text" class="form-control" id="Address" name="address" value="{{ address }}"/>
+                </div>
+
+                 <div class="form-group">
+                    <label for="orgin_pirce">
+                        Origin_price
+                    </label>
+                    <input type="text" class="form-control" id="origin_price" name="origin_price" value="{{ origin_price }}"/>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Predict
+                </button>
+            </form>
+        </div>
+        <div class="col-md-9">
+            <h3 class="text-center" style="margin-bottom: 30px">
+                Models and predictions
+            </h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" style="margin-bottom: 10px;" alt="Bootstrap Thumbnail First"
+                             src="{{ url_for('static',filename='img/euro_price.jpg') }}"/>
+                        <div class="card-block">
+                            <h5 class="card-title" style="margin-bottom: 1px;">
+                                Estimated Price: (Euro)
+                            </h5>
+                            {#							<p class="card-text">#}
+                            {#								Estimated price:#}
+                            {#							</p>#}
+                            <p class="text-left"
+                               style="font-size: 1.2em;margin-top: 40px; color: #3c763d">
+                               Origin price: {% if price is defined and price|length %}
+                                    <b>{{ origin_price }}</b>
+                                {% else %}
+                                    <b>?</b>
+                                {% endif %}
+                            </p>
+
+                            <p class="text-left"
+                               style="font-size: 1.2em;margin-top: 40px; color: #3c763d">
+                               Forecast price: {% if price is defined and price|length %}
+                                    <b>{{ price }}</b>
+                                {% else %}
+                                    <b>?</b>
+                                {% endif %}
+                            </p>
+
+                            <p class="text-left"
+                               style="font-size: 1.2em;margin-top: 40px; color: #3c763d">
+                                Difference: {% if price is defined and price|length %}
+                                    <b>{{ diff_price }}</b>
+                                {% else %}
+                                    <b>?</b>
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" alt="Bootstrap Thumbnail First" style="margin-bottom: 50px"
+                             src="{{ url_for('static',filename='img/Acuracy.jpg') }}"/>
+                        <div class="card-block">
+                            <h5 class="card-title">
+                                Model Accuracy : R-square
+                            </h5>
+                            <p class="card-text">
+                                The R-square is between [0, 1], the closer it is to 1, the better the model.
+                            </p>
+                            {#                            <p style="font-size: 3em;">#}
+                            {#                                {{ rsquared }}#}
+                            {#                            </p>#}
+                            <p class="text-center" style="font-size: 3em;margin-top: 35px;margin-bottom: 35px">
+                                {% if rsquared is defined and rsquared|length %}
+                                    <b>{{ rsquared }}</b>
+                                {% else %}
+                                    <b>?</b>
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" alt="Bootstrap Thumbnail First" style="margin-bottom: 50px"
+                             src="{{ url_for('static',filename='img/factors.jpg') }}"/>
+                        <div class="col-md-4" style="margin-bottom: 15px">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>
+                                        #
+                                    </th>
+                                    <th>
+                                        Features
+                                    </th>
+                                    <th>
+                                        P-value
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td>
+                                        Bed
+                                    </td>
+                                    <td>
+                                        {{ pvalue_bed }}
+                                    </td>
+                                </tr>
+                                <tr class="">
+                                    <td>
+                                        2
+                                    </td>
+                                    <td>
+                                        Bath
+                                    </td>
+                                    <td>
+                                        {{ pvalue_bath }}
+                                    </td>
+                                </tr>
+                                <tr class="">
+                                    <td>
+                                        3
+                                    </td>
+                                    <td>
+                                        Area
+                                    </td>
+                                    <td>
+                                        {{ pvalue_cube }} <span style="color: red">Very tiny</span>
+                                    </td>
+
+                                </tr>
+                                <tr class="">
+                                    <td>
+                                        4
+                                    </td>
+                                    <td>
+                                        Address
+                                    </td>
+                                    <td>
+                                        {{ pvalue_distance }}
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 {# Footer #}
